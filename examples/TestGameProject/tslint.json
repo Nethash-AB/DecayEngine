@@ -1,0 +1,21 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended",
+        "tslint-eslint-rules"
+    ],
+    "linterOptions": {
+      "exclude": ["src/**/*.js", "src/**/*.d.ts"]
+    },
+    "jsRules": {},
+    "rules": {
+      "no-console": [false],
+      "prefer-const": false,
+      "max-line-length": [true, 220],
+      "no-namespace": false,
+      "variable-name": [true, "check-format", "allow-leading-underscore", "ban-keywords"],
+      "no-bitwise": false
+    },
+    "rulesDirectory": []
+}
+

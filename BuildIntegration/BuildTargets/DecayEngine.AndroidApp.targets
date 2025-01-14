@@ -1,0 +1,35 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project=".\DecayEngine.AndroidDependency.targets" />
+
+    <PropertyGroup>
+        <AndroidApplication>True</AndroidApplication>
+        <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+        <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+        <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
+        <AndroidEnablePreloadAssemblies>False</AndroidEnablePreloadAssemblies>
+        <AndroidBuildApplicationPackage>True</AndroidBuildApplicationPackage>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <AndroidManagedSymbols>True</AndroidManagedSymbols>
+        <DebugType>full</DebugType>
+        <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+        <AndroidLinkMode>None</AndroidLinkMode>
+        <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <AndroidManagedSymbols>false</AndroidManagedSymbols>
+        <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+        <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+        <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+        <AotAssemblies>True</AotAssemblies>
+        <EnableLLVM>True</EnableLLVM>
+        <EnableProguard>True</EnableProguard>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="Properties\AndroidManifest.xml" />
+        <AndroidAsset Include="Assets\*.*" Exclude="Assets\*.txt" />
+    </ItemGroup>
+</Project>

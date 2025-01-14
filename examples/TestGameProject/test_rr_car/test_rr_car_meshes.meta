@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <mesh id="chassis_mesh">
+        <properties>
+            <source>./meshes/chassis_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="exhaust_right_mesh">
+        <properties>
+            <source>./meshes/exhaust_right_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="exhaust_left_mesh">
+        <properties>
+            <source>./meshes/exhaust_left_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="protector_right_mesh">
+        <properties>
+            <source>./meshes/protector_right_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="bumper_front_mesh">
+        <properties>
+            <source>./meshes/bumper_front_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="protector_left_mesh">
+        <properties>
+            <source>./meshes/protector_left_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="axle_rear_mesh">
+        <properties>
+            <source>./meshes/axle_rear_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="axle_front_mesh">
+        <properties>
+            <source>./meshes/axle_front_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="barrel_mesh">
+        <properties>
+            <source>./meshes/barrel_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="plank2_mesh">
+        <properties>
+            <source>./meshes/plank2_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="plank1_mesh">
+        <properties>
+            <source>./meshes/plank1_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="wheel_mesh">
+        <properties>
+            <source>./meshes/wheel_mesh.dec3d</source>
+        </properties>
+    </mesh>
+    <mesh id="bumper_front_detail_mesh">
+        <properties>
+            <source>./meshes/bumper_front_detail_mesh.dec3d</source>
+        </properties>
+    </mesh>
+</resources>

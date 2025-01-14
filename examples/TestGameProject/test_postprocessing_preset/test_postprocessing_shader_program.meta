@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <shader id="test_postprocessing_vertex_shader">
+        <properties>
+            <language>glsl</language>
+            <fallbacks>glsl;glsles</fallbacks>
+            <compile>true</compile>
+            <type>vertex</type>
+            <source>./test_postprocessing_vertex_shader.vert</source>
+        </properties>
+    </shader>
+
+    <shader id="test_postprocessing_fragment_shader">
+        <properties>
+            <language>glsl</language>
+            <fallbacks>glsl;glsles</fallbacks>
+            <compile>true</compile>
+            <type>fragment</type>
+            <source>./test_postprocessing_fragment_shader.frag</source>
+        </properties>
+    </shader>
+
+    <shader id="test_postprocessing_tint_fragment_shader">
+        <properties>
+            <language>glsl</language>
+            <fallbacks>glsl;glsles</fallbacks>
+            <compile>true</compile>
+            <type>fragment</type>
+            <source>./test_postprocessing_tint_fragment_shader.frag</source>
+        </properties>
+    </shader>
+
+    <shaderProgram id="test_postprocessing_shader_program">
+        <properties>
+            <shaders>
+                <vertex>
+                    <resource id="test_postprocessing_vertex_shader" />
+                </vertex>
+                <fragment>
+                    <resource id="test_postprocessing_fragment_shader" />
+                </fragment>
+            </shaders>
+        </properties>
+    </shaderProgram>
+
+    <shaderProgram id="test_postprocessing_tint_shader_program">
+        <properties>
+            <shaders>
+                <vertex>
+                    <resource id="test_postprocessing_vertex_shader" />
+                </vertex>
+                <fragment>
+                    <resource id="test_postprocessing_tint_fragment_shader" />
+                </fragment>
+            </shaders>
+        </properties>
+    </shaderProgram>
+</resources>

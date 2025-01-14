@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>CoreRT</DecayProjectType>
+        <DecayIncludeMinimal>True</DecayIncludeMinimal>
+        <DecayInclude>ResourceBuilder;ResourceBuilderLib;ModuleSDK</DecayInclude>
+        <DecayTool>True</DecayTool>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <ApplicationIcon>decay_assetcompiler.ico</ApplicationIcon>
+        <UseWinExeForDebug>False</UseWinExeForDebug>
+        <UseWinExeForRelease>False</UseWinExeForRelease>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommandLineParser" Version="2.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="./deps/texturepacker/decay2d/exporter.xml" Link="texturepacker/decay2d/exporter.xml">
+            <Visible>false</Visible>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Include="./deps/texturepacker/decay2d/template.xml" Link="texturepacker/decay2d/template.xml">
+            <Visible>false</Visible>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Include="./deps/texturepacker/decay2d/grantlee/0.2/DecayExporter.qs" Link="texturepacker/decay2d/grantlee/0.2/DecayExporter.qs">
+            <Visible>false</Visible>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Include="./deps/physicseditor/decay2d/exporter.xml" Link="physicseditor/decay2d/exporter.xml">
+            <Visible>false</Visible>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Include="./deps/physicseditor/decay2d/template.xml" Link="physicseditor/decay2d/template.xml">
+            <Visible>false</Visible>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+        <None Include="./deps/physicseditor/decay2d/grantlee/0.2/DecayExporter.qs" Link="physicseditor/decay2d/grantlee/0.2/DecayExporter.qs">
+            <Visible>false</Visible>
+            <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+            <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <Import Project="..\..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

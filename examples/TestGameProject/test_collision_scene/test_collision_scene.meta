@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <scene id="test_collision_scene">
+        <children>
+            <component type="cameraPersp" name="scene_camera_persp" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="-2" />
+                        <rotation x="0" y="0" z="0" />
+                    </transform>
+                    <zNear>0.1</zNear>
+                    <zFar>100</zFar>
+                    <fov>1.5707963267948966192313216916398</fov>
+                    <isAudioListener>true</isAudioListener>
+                    <renderToScreen>true</renderToScreen>
+                </properties>
+            </component>
+
+            <component type="script" name="scene_script" active="true">
+                <template>
+                    <resource id="test_collision_scene_script" />
+                </template>
+                <properties>
+                    <injections>
+                        <injection id="car1">
+                            <this>
+                                <children>
+                                    <withName name="test_car1">
+                                        <first />
+                                    </withName>
+                                </children>
+                            </this>
+                        </injection>
+                        <injection id="car2">
+                            <this>
+                                <children>
+                                    <withName name="test_car2">
+                                        <first />
+                                    </withName>
+                                </children>
+                            </this>
+                        </injection>
+                    </injections>
+                </properties>
+            </component>
+
+            <gameObject name="test_car1" active="true">
+                <template>
+                    <resource id="test_car_prefab" />
+                </template>
+                <properties>
+                    <transform>
+                        <position x="-2" y="0" z="0" />
+                        <rotation x="0" y="0" z="-90" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+            </gameObject>
+
+            <gameObject name="test_car2" active="true">
+                <template>
+                    <resource id="test_car_prefab" />
+                </template>
+                <properties>
+                    <transform>
+                        <position x="2" y="0" z="0" />
+                        <rotation x="0" y="0" z="90" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+            </gameObject>
+        </children>
+    </scene>
+</resources>

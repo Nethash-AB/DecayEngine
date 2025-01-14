@@ -1,0 +1,19 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>AndroidModule</DecayProjectType>
+        <DecayIncludeMinimal>True</DecayIncludeMinimal>
+        <DecayDesktop>False</DecayDesktop>
+        <DecayAndroid>True</DecayAndroid>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsBindingProject>False</IsBindingProject>
+        <AndroidSupportedAbis>armeabi-v7a;arm64-v8a;x86;x86_64</AndroidSupportedAbis>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DecayEngine.Bullet.Managed\DecayEngine.Bullet.Managed.csproj" />
+    </ItemGroup>
+
+    <Import Project="..\..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

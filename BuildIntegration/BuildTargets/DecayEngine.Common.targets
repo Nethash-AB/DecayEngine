@@ -1,0 +1,49 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup Condition="'$(DecayProjectType)' != 'WinRTApp'">
+        <LangVersion>8</LangVersion>
+        <Configurations>Debug;Release</Configurations>
+        <Platforms>AnyCPU</Platforms>
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <EnableDefaultNoneItems>False</EnableDefaultNoneItems>
+
+        <DecayRuntimeType>Other</DecayRuntimeType>
+    </PropertyGroup>
+
+    <!-- Android -->
+    <ItemGroup Condition="'$(DecayAndroid)' == 'True'">
+        <EmbeddedNativeLibrary Include="$(MSBuildProjectDirectory)\nativelibs\**\*.so*" Visible="False" />
+    </ItemGroup>
+
+    <!-- Desktop -->
+    <ItemGroup Condition="'$(DecayDesktop)' == 'True' And '$(DecayRuntimeType)' != 'WinRT'">
+        <!-- Windows x64 -->
+        <None Include="$(MSBuildProjectDirectory)\runtimes\win-x64\native\**\*.dll"
+              Visible="false"
+              CopyToOutputDirectory="Always"
+              CopyToPublishDirectory="Always" />
+
+        <!-- Linux x64 -->
+        <None Include="$(MSBuildProjectDirectory)\runtimes\linux-x64\native\**\*.so*"
+              Visible="false"
+              CopyToOutputDirectory="Always"
+              CopyToPublishDirectory="Always" />
+
+        <!-- MacOS x64 -->
+        <None Include="$(MSBuildProjectDirectory)\runtimes\osx\native\**\*.dylib*"
+              Visible="false"
+              CopyToOutputDirectory="Always"
+              CopyToPublishDirectory="Always" />
+    </ItemGroup>
+
+    <!-- WinRT -->
+    <ItemGroup Condition="'$(DecayRuntimeType)' == 'WinRT'">
+        <!-- Windows x64 -->
+        <None Include="$(MSBuildProjectDirectory)\runtimes\win10-x64\native\**\*.dll"
+              Link="%(Filename)%(Extension)"
+              Visible="false"
+              CopyToOutputDirectory="Always"
+              CopyToPublishDirectory="Always" />
+    </ItemGroup>
+</Project>

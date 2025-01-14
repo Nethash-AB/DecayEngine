@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>Dependency</DecayProjectType>
+        <DecayIncludeMinimal>True</DecayIncludeMinimal>
+        <DecayInclude>ResourceBuilderLib;ModuleSDK</DecayInclude>
+        <DecayDesktop>True</DecayDesktop>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="TeximpNet" Version="1.4.1" />
+    </ItemGroup>
+
+    <Import Project="..\..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

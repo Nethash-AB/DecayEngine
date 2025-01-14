@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <script id="test_tween_scene_script">
+        <properties>
+            <type>nativejs</type>
+            <source>./test_tween_scene_script.js</source>
+        </properties>
+    </script>
+</resources>

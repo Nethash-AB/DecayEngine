@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <prefab id="test_rr_car">
+        <children>
+            <gameObject name="chassis_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_chassis_mesh" active="true">
+                        <template>
+                            <resource id="chassis_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_chassis_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="exhaust_right_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_exhaust_right_mesh" active="true">
+                        <template>
+                            <resource id="exhaust_right_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_exhaust_right_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="exhaust_left_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_exhaust_left_mesh" active="true">
+                        <template>
+                            <resource id="exhaust_left_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_exhaust_left_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="protector_right_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_protector_right_mesh" active="true">
+                        <template>
+                            <resource id="protector_right_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_protector_right_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="bumper_front_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_bumper_front_mesh" active="true">
+                        <template>
+                            <resource id="bumper_front_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_bumper_front_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="protector_left_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_protector_left_mesh" active="true">
+                        <template>
+                            <resource id="protector_left_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_protector_left_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="axle_rear_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_axle_rear_mesh" active="true">
+                        <template>
+                            <resource id="axle_rear_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_axle_rear_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="axle_front_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_axle_front_mesh" active="true">
+                        <template>
+                            <resource id="axle_front_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_axle_front_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="barrel_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_barrel_mesh" active="true">
+                        <template>
+                            <resource id="barrel_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_barrel_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="plank2_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_plank2_mesh" active="true">
+                        <template>
+                            <resource id="plank2_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_plank2_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="plank1_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_plank1_mesh" active="true">
+                        <template>
+                            <resource id="plank1_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_plank1_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="wheel_back_right_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_wheel_mesh" active="true">
+                        <template>
+                            <resource id="wheel_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_wheel_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <gameObject name="bumper_front_detail_transform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_bumper_front_detail_mesh" active="true">
+                        <template>
+                            <resource id="bumper_front_detail_mesh" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_bumper_front_detail_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <component type="pbrMaterial" name="material_chassis_material" active="true">
+                <template>
+                    <resource id="chassis_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_exhaust_right_material" active="true">
+                <template>
+                    <resource id="exhaust_right_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_exhaust_left_material" active="true">
+                <template>
+                    <resource id="exhaust_left_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_protector_right_material" active="true">
+                <template>
+                    <resource id="protector_right_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_protector_left_material" active="true">
+                <template>
+                    <resource id="protector_left_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_bumper_front_material" active="true">
+                <template>
+                    <resource id="bumper_front_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_axle_rear_material" active="true">
+                <template>
+                    <resource id="axle_rear_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_axle_front_material" active="true">
+                <template>
+                    <resource id="axle_front_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_barrel_material" active="true">
+                <template>
+                    <resource id="barrel_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_plank2_material" active="true">
+                <template>
+                    <resource id="plank2_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_plank1_material" active="true">
+                <template>
+                    <resource id="plank1_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_wheel_material" active="true">
+                <template>
+                    <resource id="wheel_material" />
+                </template>
+            </component>
+            <component type="pbrMaterial" name="material_bumper_front_detail_material" active="true">
+                <template>
+                    <resource id="bumper_front_detail_material" />
+                </template>
+            </component>
+            <component type="shaderProgram" name="default_pbr_shader_program" active="true">
+                <template>
+                    <resource id="default_pbr_shader_program" />
+                </template>
+            </component>
+        </children>
+    </prefab>
+</resources>

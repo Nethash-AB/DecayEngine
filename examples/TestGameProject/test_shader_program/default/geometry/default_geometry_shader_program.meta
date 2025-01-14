@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <shader id="default_geometry_vertex_shader">
+        <properties>
+            <language>glsl</language>
+            <fallbacks>glsl;glsles</fallbacks>
+            <compile>true</compile>
+            <type>vertex</type>
+            <source>./default_geometry_vertex_shader.vert</source>
+        </properties>
+    </shader>
+
+    <shader id="default_geometry_fragment_shader">
+        <properties>
+            <language>glsl</language>
+            <fallbacks>glsl;glsles</fallbacks>
+            <compile>true</compile>
+            <type>fragment</type>
+            <source>./default_geometry_fragment_shader.frag</source>
+        </properties>
+    </shader>
+
+    <shaderProgram id="default_geometry_shader_program">
+        <properties>
+            <shaders>
+                <vertex>
+                    <resource id="default_geometry_vertex_shader" />
+                </vertex>
+                <fragment>
+                    <resource id="default_geometry_fragment_shader" />
+                </fragment>
+            </shaders>
+        </properties>
+    </shaderProgram>
+</resources>

@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <ProjectReference Include="$(DecayRootDirectory)Extensions\DecayEngine.Tween\*.csproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.Tween'" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <_DecayIncluded>$(_DecayIncluded)Tween;</_DecayIncluded>
+    </PropertyGroup>
+
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.ModuleSDK.targets" Condition="!$(_DecayIncluded.Contains(';ModuleSDK;'))" />
+</Project>

@@ -1,0 +1,11 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>Dependency</DecayProjectType>
+        <DecayIncludeMinimal>True</DecayIncludeMinimal>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <DecayDesktop>True</DecayDesktop>
+        <DecayAndroid>True</DecayAndroid>
+    </PropertyGroup>
+
+    <Import Project="..\..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

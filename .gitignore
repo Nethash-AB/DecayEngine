@@ -1,0 +1,11 @@
+DecayEngine.sln.DotSettings.user
+.vs/
+.idea/
+.tmp/
+**/bin/
+**/obj/
+res/
+./target/
+target/
+AppPackages/
+*.pfx

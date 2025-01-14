@@ -1,0 +1,53 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <DecayAndroid>True</DecayAndroid>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <TargetFramework>monoandroid81</TargetFramework>
+        <OutputType>Library</OutputType>
+        <DecayRuntimeType>Xamarin</DecayRuntimeType>
+        <DecayRuntimeMonoType>Android</DecayRuntimeMonoType>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <ProductVersion>8.0.30703</ProductVersion>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+        <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
+        <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+        <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+        <FileAlignment>512</FileAlignment>
+        <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+        <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
+        <AndroidUseIntermediateDesignerFile>True</AndroidUseIntermediateDesignerFile>
+        <NoWarn>$(NoWarn);CS0109;BG8200</NoWarn>
+
+        <!-- Workaround for: https://github.com/onovotny/MSBuildSdkExtras/issues/173 -->
+        <DesignTimeBuild>False</DesignTimeBuild>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <DebugSymbols>True</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>False</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DebugSymbols>True</DebugSymbols>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>True</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(IsBindingProject)' != 'True'">
+        <AndroidResource Include="Resources\**\*" Exclude="Resources\**\*.cs;Resources\**\*.txt" />
+    </ItemGroup>
+</Project>

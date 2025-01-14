@@ -1,0 +1,13 @@
+{
+  "name": "decay-engine-game",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Nethash AB",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "tslint": "^5.17.0",
+    "tslint-eslint-rules": "^5.4.0",
+    "typescript": "^3.5.1"
+  }
+}

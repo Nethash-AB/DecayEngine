@@ -1,0 +1,27 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+  <!-- Don't create raw constructor for class FMOD. -->
+  <attr path="/api/package[@name='org.fmod']/class[@name='FMOD']" name="disable_raw_ctor">1</attr>
+  <attr path="/api/package[@name='org.fmod']/class[@name='FMOD']" name="disable_gtype_ctor">1</attr>
+  <remove-node path="/api/package[@name='org.fmod']/class[@name='FMOD']/constructor[@name='FMOD' and count(parameter)=0]" />
+
+  <!-- Hide base Close method -->
+  <attr path="/api/package[@name='org.fmod']/class[@name='FMOD']/method[@name='close']" name="visibility">protected</attr>
+  <attr path="/api/package[@name='org.fmod']/class[@name='FMOD']/method[@name='close']" name="managedName">CloseInternal</attr>
+
+  <!-- Normalize the namespace for .NET -->
+  <attr path="/api/package[@name='org.fmod']" name="managedName">DecayEngine.Fmod.Android</attr>
+
+  <!-- Make FMOD class protected. -->
+<!--  <attr path="/api/package[@name='org.fmod']/class[@name='FMOD']" name="visibility">protected</attr>-->
+
+  <!-- Rename FMOD class. -->
+  <attr path="/api/package[@name='org.fmod']/class[@name='FMOD']" name="managedName">FmodAndroid</attr>
+</metadata>

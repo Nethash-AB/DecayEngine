@@ -1,0 +1,16 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project=".\DecayEngine.AndroidDependency.targets" />
+
+    <PropertyGroup Condition="'$(IsBindingProject)' == 'True'">
+        <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
+        <AndroidGenerateJniMarshalMethods>True</AndroidGenerateJniMarshalMethods>
+        <AndroidClassParser>class-parse</AndroidClassParser>
+        <AndroidCodegenTarget>XAJavaInterop1</AndroidCodegenTarget>
+    </PropertyGroup>
+
+    <ItemGroup Condition="'$(IsBindingProject)' == 'True'">
+        <None Remove="Additions\*.txt" />
+        <EmbeddedJar Include="Jars\*.jar" Exclude="Jars\*.txt" />
+        <TransformFile Include="Transforms\*.xml" />
+    </ItemGroup>
+</Project>

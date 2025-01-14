@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <prefab id="test_newbuffer_prefab">
+        <children>
+            <component type="animatedMaterial" name="mat1" active="true">
+                <template>
+                    <resource id="test_material" />
+                </template>
+            </component>
+
+            <component type="shaderProgram" name="program1" active="true">
+                <template>
+                    <resource id="default_shader_program" />
+                </template>
+            </component>
+
+            <component type="script" name="script_go" active="true">
+                <template>
+                    <resource id="test_newbuffer_prefab_script" />
+                </template>
+                <properties>
+                    <injections>
+                        <injection id="explosionSprite">
+                            <this>
+                                <components>
+                                    <ofType type="animatedSprite">
+                                        <first />
+                                    </ofType>
+                                </components>
+                            </this>
+                        </injection>
+                    </injections>
+                </properties>
+            </component>
+
+            <component type="animatedSprite" name="sprite1" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                    <material>
+                        <this>
+                            <components>
+                                <ofType type="animatedMaterial">
+                                    <withName name="mat1">
+                                        <first />
+                                    </withName>
+                                </ofType>
+                            </components>
+                        </this>
+                    </material>
+                    <shaderProgram>
+                        <this>
+                            <components>
+                                <ofType type="shaderProgram">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </this>
+                    </shaderProgram>
+                    <camera>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraPersp">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </camera>
+                </properties>
+            </component>
+
+            <component type="renderTargetSprite" name="minimap_sprite" active="true">
+                <properties>
+                    <transform mode="orthoRelative">
+                        <position x="-0.5" y="-0.5" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                    <frameBuffer>
+                        <global>
+                            <frameBuffer name="geometryPersp" />
+                        </global>
+                    </frameBuffer>
+                    <shaderProgram>
+                        <this>
+                            <components>
+                                <ofType type="shaderProgram">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </this>
+                    </shaderProgram>
+                    <camera>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraOrtho">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </camera>
+                    <maintainAspectRatio>true</maintainAspectRatio>
+                </properties>
+            </component>
+
+            <component type="renderTargetSprite" name="minimap_sprite2" active="true">
+                <properties>
+                    <transform mode="orthoRelative">
+                        <position x="0.5" y="-0.5" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                    <frameBuffer>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraPersp">
+                                    <frameBuffer name="sharpen" />
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </frameBuffer>
+                    <shaderProgram>
+                        <this>
+                            <components>
+                                <ofType type="shaderProgram">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </this>
+                    </shaderProgram>
+                    <camera>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraOrtho">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </camera>
+                    <maintainAspectRatio>true</maintainAspectRatio>
+                </properties>
+            </component>
+
+            <component type="renderTargetSprite" name="minimap_sprite3" active="true">
+                <properties>
+                    <transform mode="orthoRelative">
+                        <position x="-0.5" y="0.5" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                    <frameBuffer>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraPersp">
+                                    <frameBuffer name="camera" />
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </frameBuffer>
+                    <shaderProgram>
+                        <this>
+                            <components>
+                                <ofType type="shaderProgram">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </this>
+                    </shaderProgram>
+                    <camera>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraOrtho">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </camera>
+                    <maintainAspectRatio>true</maintainAspectRatio>
+                </properties>
+            </component>
+
+            <component type="renderTargetSprite" name="minimap_sprite4" active="true">
+                <properties>
+                    <transform mode="orthoRelative">
+                        <position x="0.5" y="0.5" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                    <frameBuffer>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraPersp">
+                                    <frameBuffer name="tint" />
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </frameBuffer>
+                    <shaderProgram>
+                        <this>
+                            <components>
+                                <ofType type="shaderProgram">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </this>
+                    </shaderProgram>
+                    <camera>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraOrtho">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </camera>
+                    <maintainAspectRatio>true</maintainAspectRatio>
+                </properties>
+            </component>
+        </children>
+    </prefab>
+</resources>

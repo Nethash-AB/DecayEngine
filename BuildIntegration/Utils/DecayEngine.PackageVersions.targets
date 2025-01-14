@@ -1,0 +1,13 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <SystemRuntimeVersion>4.3.0</SystemRuntimeVersion>
+        <SystemNumericsVersion>4.5.0</SystemNumericsVersion>
+<!--        <SystemNumericsVersion>4.6.0-preview6.19230.9</SystemNumericsVersion>-->
+        <ImageSharpVersion>1.0.0-beta0006</ImageSharpVersion>
+        <ImageSharpShapesVersion>1.0.0-beta0008</ImageSharpShapesVersion>
+        <PfimVersion>0.7.0</PfimVersion>
+        <CoreRTCompilerVersion>1.0.0-alpha-28001-02</CoreRTCompilerVersion>
+        <MicrosoftCSharpVersion>4.6.0-preview3.19128.7</MicrosoftCSharpVersion>
+        <NilJsVersion>2.5.1339</NilJsVersion>
+    </PropertyGroup>
+</Project>

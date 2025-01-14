@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>Managed</DecayProjectType>
+        <DecayIncludeAll>True</DecayIncludeAll>
+        <DecayTool>True</DecayTool>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsPackable>false</IsPackable>
+        <UseWinExeForDebug>False</UseWinExeForDebug>
+        <UseWinExeForRelease>False</UseWinExeForRelease>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <Optimize>false</Optimize>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="CommandLineParser" Version="2.5.0" />
+    </ItemGroup>
+
+    <Import Project="..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

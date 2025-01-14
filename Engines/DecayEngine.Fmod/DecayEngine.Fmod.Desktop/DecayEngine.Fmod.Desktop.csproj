@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>Dependency</DecayProjectType>
+        <DecayIncludeMinimal>True</DecayIncludeMinimal>
+        <DecayDesktop>True</DecayDesktop>
+        <DecayAndroid>False</DecayAndroid>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\DecayEngine.Fmod.Managed\DecayEngine.Fmod.Managed.csproj" />
+    </ItemGroup>
+
+    <Import Project="..\..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

@@ -1,0 +1,49 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <ProjectReference Include="$(DecayRootDirectory)Core\DecayEngine.DecPakLib\*.csproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.DecPakLib'" />
+        <PackageReference Include="protobuf-net" Version="2.4.0" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(DecayRuntimeType)' == 'WinRT'">
+        <PackageReference Include="System.Runtime" />
+        <PackageReference Include="System.Memory" />
+        <PackageReference Include="System.IO.Compression" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(DecayRuntimeType)' != 'WinRT'">
+        <PackageReference Include="System.Runtime" Version="$(SystemRuntimeVersion)" />
+        <PackageReference Include="System.Memory" Version="4.5.3" />
+        <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+    </ItemGroup>
+
+<!--    <Choose>-->
+<!--        <When Condition="'$(DecayRuntimeType)' == 'WinRT'">-->
+<!--            <ItemGroup>-->
+<!--                <Reference Include="System.Numerics.Vectors">-->
+<!--                    <HintPath>$(NuGetPackageRoot)\system.numerics.vectors\$(SystemNumericsVersion)\lib\netstandard2.0\System.Numerics.Vectors.dll</HintPath>-->
+<!--                </Reference>-->
+<!--            </ItemGroup>-->
+<!--        </When>-->
+<!--        <Otherwise>-->
+<!--            <ItemGroup>-->
+<!--                &lt;!&ndash;-->
+<!--                    This is the nastiest hackfix I have seen in a loooooooong time.-->
+<!--                    GeneratePathProperty is not even documented: https://github.com/NuGet/docs.microsoft.com-nuget/issues/1506-->
+<!--                &ndash;&gt;-->
+<!--                <PackageReference Include="System.Numerics.Vectors">-->
+<!--                    <Version>$(SystemNumericsVersion)</Version>-->
+<!--                    <ExcludeAssets>Compile</ExcludeAssets>-->
+<!--                    <GeneratePathProperty>True</GeneratePathProperty>-->
+<!--                </PackageReference>-->
+<!--                <Reference Include="System.Numerics.Vectors">-->
+<!--                    <HintPath>$(NuGetPackageRoot)\system.numerics.vectors\$(SystemNumericsVersion)\lib\netstandard2.0\System.Numerics.Vectors.dll</HintPath>-->
+<!--                </Reference>-->
+<!--            </ItemGroup>-->
+<!--        </Otherwise>-->
+<!--    </Choose>-->
+
+    <PropertyGroup>
+        <_DecayIncluded>$(_DecayIncluded)DecPakLib;</_DecayIncluded>
+    </PropertyGroup>
+</Project>

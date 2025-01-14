@@ -1,0 +1,14 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <ProjectReference Include="$(DecayRootDirectory)Tools\ResourceBuilder\DecayEngine.ResourceBuilderLib\*.csproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.ResourceBuilderLib'" />
+        <PackageReference Include="AssimpNet" Version="4.1.0" />
+        <PackageReference Include="Pfim" Version="$(PfimVersion)" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <_DecayIncluded>$(_DecayIncluded)ResourceBuilderLib;</_DecayIncluded>
+    </PropertyGroup>
+
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.ModuleSDK.targets" Condition="!$(_DecayIncluded.Contains(';ModuleSDK;'))" />
+</Project>

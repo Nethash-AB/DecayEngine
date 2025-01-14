@@ -1,0 +1,165 @@
+using System;
+using System.Runtime.InteropServices;
+
+namespace DecayEngine.Demo.Uwp
+{
+    public static class GLTest
+    {
+        [Flags]
+        public enum ClearBufferMask
+        {
+            DepthBufferBit = 0x00000100,
+            AccumBufferBit = 0x00000200,
+            StencilBufferBit = 0x00000400,
+            ColorBufferBit = 0x00004000,
+        }
+
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        public delegate void Clear(ClearBufferMask mask);
+        public static Clear glClear;
+
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        public delegate void ClearColor(float red, float green, float blue, float alpha);
+        public static ClearColor glClearColor;
+
+        public enum EnableCap
+        {
+            //PointSmooth = ((int)0x0B10),
+            LineSmooth = 0x0B20,
+            //LineStipple = ((int)0x0B24),
+            PolygonSmooth = 0x0B41,
+            //PolygonStipple = ((int)0x0B42),
+            CullFace = 0x0B44,
+            //Lighting = ((int)0x0B50),
+            //ColorMaterial = ((int)0x0B57),
+            //Fog = ((int)0x0B60),
+            DepthTest = 0x0B71,
+            StencilTest = 0x0B90,
+            //Normalize = ((int)0x0BA1),
+            //AlphaTest = ((int)0x0BC0),
+            Dither = 0x0BD0,
+            Blend = 0x0BE2,
+            IndexLogicOp = 0x0BF1,
+            ColorLogicOp = 0x0BF2,
+            ScissorTest = 0x0C11,
+            /*TextureGenS = ((int)0x0C60),
+            TextureGenT = ((int)0x0C61),
+            TextureGenR = ((int)0x0C62),
+            TextureGenQ = ((int)0x0C63),*/
+            AutoNormal = 0x0D80,
+            Map1Color4 = 0x0D90,
+            Map1Index = 0x0D91,
+            Map1Normal = 0x0D92,
+            Map1TextureCoord1 = 0x0D93,
+            Map1TextureCoord2 = 0x0D94,
+            Map1TextureCoord3 = 0x0D95,
+            Map1TextureCoord4 = 0x0D96,
+            Map1Vertex3 = 0x0D97,
+            Map1Vertex4 = 0x0D98,
+            Map2Color4 = 0x0DB0,
+            Map2Index = 0x0DB1,
+            Map2Normal = 0x0DB2,
+            Map2TextureCoord1 = 0x0DB3,
+            Map2TextureCoord2 = 0x0DB4,
+            Map2TextureCoord3 = 0x0DB5,
+            Map2TextureCoord4 = 0x0DB6,
+            Map2Vertex3 = 0x0DB7,
+            Map2Vertex4 = 0x0DB8,
+            Texture1D = 0x0DE0,
+            Texture2D = 0x0DE1,
+            PolygonOffsetPoint = 0x2A01,
+            PolygonOffsetLine = 0x2A02,
+            ClipPlane0 = 0x3000,
+            ClipPlane1 = 0x3001,
+            ClipPlane2 = 0x3002,
+            ClipPlane3 = 0x3003,
+            ClipPlane4 = 0x3004,
+            ClipPlane5 = 0x3005,
+            /*Light0 = ((int)0x4000),
+            Light1 = ((int)0x4001),
+            Light2 = ((int)0x4002),
+            Light3 = ((int)0x4003),
+            Light4 = ((int)0x4004),
+            Light5 = ((int)0x4005),
+            Light6 = ((int)0x4006),
+            Light7 = ((int)0x4007),*/
+            Convolution1D = 0x8010,
+            Convolution1DExt = 0x8010,
+            Convolution2D = 0x8011,
+            Convolution2DExt = 0x8011,
+            Separable2D = 0x8012,
+            Separable2DExt = 0x8012,
+            Histogram = 0x8024,
+            HistogramExt = 0x8024,
+            MinmaxExt = 0x802E,
+            PolygonOffsetFill = 0x8037,
+            //RescaleNormal = ((int)0x803A),
+            RescaleNormalExt = 0x803A,
+            Texture3DExt = 0x806F,
+            VertexArray = 0x8074,
+            NormalArray = 0x8075,
+            ColorArray = 0x8076,
+            IndexArray = 0x8077,
+            TextureCoordArray = 0x8078,
+            EdgeFlagArray = 0x8079,
+            InterlaceSgix = 0x8094,
+            Multisample = 0x809D,
+            SampleAlphaToCoverage = 0x809E,
+            SampleAlphaToMaskSgis = 0x809E,
+            SampleAlphaToOne = 0x809F,
+            SampleAlphaToOneSgis = 0x809F,
+            SampleCoverage = 0x80A0,
+            SampleMaskSgis = 0x80A0,
+            TextureColorTableSgi = 0x80BC,
+            ColorTable = 0x80D0,
+            ColorTableSgi = 0x80D0,
+            PostConvolutionColorTable = 0x80D1,
+            PostConvolutionColorTableSgi = 0x80D1,
+            PostColorMatrixColorTable = 0x80D2,
+            PostColorMatrixColorTableSgi = 0x80D2,
+            Texture4DSgis = 0x8134,
+            PixelTexGenSgix = 0x8139,
+            SpriteSgix = 0x8148,
+            ReferencePlaneSgix = 0x817D,
+            IrInstrument1Sgix = 0x817F,
+            CalligraphicFragmentSgix = 0x8183,
+            FramezoomSgix = 0x818B,
+            FogOffsetSgix = 0x8198,
+            SharedTexturePaletteExt = 0x81FB,
+            AsyncHistogramSgix = 0x832C,
+            PixelTextureSgis = 0x8353,
+            AsyncTexImageSgix = 0x835C,
+            AsyncDrawPixelsSgix = 0x835D,
+            AsyncReadPixelsSgix = 0x835E,
+            FragmentLightingSgix = 0x8400,
+            FragmentColorMaterialSgix = 0x8401,
+            FragmentLight0Sgix = 0x840C,
+            FragmentLight1Sgix = 0x840D,
+            FragmentLight2Sgix = 0x840E,
+            FragmentLight3Sgix = 0x840F,
+            FragmentLight4Sgix = 0x8410,
+            FragmentLight5Sgix = 0x8411,
+            FragmentLight6Sgix = 0x8412,
+            FragmentLight7Sgix = 0x8413,
+            //FogCoordArray = ((int)0x8457),
+            ColorSum = 0x8458,
+            SecondaryColorArray = 0x845E,
+            TextureCubeMap = 0x8513,
+            ProgramPointSize = 0x8642,
+            VertexProgramPointSize = 0x8642,
+            //VertexProgramTwoSide = ((int)0x8643),
+            DepthClamp = 0x864F,
+            TextureCubeMapSeamless = 0x884F,
+            PointSprite = 0x8861,
+            RasterizerDiscard = 0x8C89,
+            FramebufferSrgb = 0x8DB9,
+            SampleMask = 0x8E51,
+            PrimitiveRestart = 0x8F9D,
+            DebugOutput = 0x92E0
+        }
+
+        [UnmanagedFunctionPointer(CallingConvention.StdCall)]
+        public delegate void Enable(EnableCap cap);
+        public static Enable glEnable;
+    }
+}

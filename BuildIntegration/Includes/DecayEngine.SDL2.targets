@@ -1,0 +1,39 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <ProjectReference Include="$(DecayRootDirectory)Engines\DecayEngine.SDL2\DecayEngine.SDL2.Native\*.csproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.SDL2.Native'" />
+    </ItemGroup>
+    <Choose>
+        <When Condition="'$(DecayProjectType)' == 'AndroidApp' Or '$(DecayProjectType)' == 'AndroidModule'">
+            <ItemGroup>
+                <ProjectReference Include="$(DecayRootDirectory)Engines\DecayEngine.SDL2\DecayEngine.SDL2.Android\*.csproj"
+                                  Condition="'$(MSBuildProjectName)' != 'DecayEngine.SDL2.Android' And '$(MSBuildProjectName)' != 'DecayEngine.SDL2.Native'" />
+            </ItemGroup>
+        </When>
+        <When Condition="'$(DecayProjectType)' == 'WinRTApp' Or '$(DecayProjectType)' == 'WinRTModule'">
+            <ItemGroup>
+                <ProjectReference Include="$(DecayRootDirectory)WinRT\SDL2\VisualC-WinRT\UWP_VS2015\SDL-UWP.vcxproj"
+                                  Condition="'$(MSBuildProjectName)' != 'DecayEngine.SDL2.WinRT' And '$(MSBuildProjectName)' != 'DecayEngine.SDL2.Native'" >
+                    <Project>{89e9b32e-a86a-47c3-a948-d2b1622925ce}</Project>
+                    <Name>SDL2-UWP</Name>
+                </ProjectReference>
+
+                <ProjectReference Include="$(DecayRootDirectory)Engines\DecayEngine.SDL2\DecayEngine.SDL2.WinRT\*.csproj"
+                                  Condition="'$(MSBuildProjectName)' != 'DecayEngine.SDL2.WinRT' And '$(MSBuildProjectName)' != 'DecayEngine.SDL2.Native'" />
+            </ItemGroup>
+        </When>
+        <Otherwise>
+            <ItemGroup>
+                <ProjectReference Include="$(DecayRootDirectory)Engines\DecayEngine.SDL2\DecayEngine.SDL2.Desktop\*.csproj"
+                                  Condition="'$(DecayDesktop)' == 'True' And
+                                  '$(MSBuildProjectName)' != 'DecayEngine.SDL2.Desktop' And '$(MSBuildProjectName)' != 'DecayEngine.SDL2.Native'"/>
+            </ItemGroup>
+        </Otherwise>
+    </Choose>
+
+    <PropertyGroup>
+        <_DecayIncluded>$(_DecayIncluded)SDL2;</_DecayIncluded>
+    </PropertyGroup>
+
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.ModuleSDK.targets" Condition="!$(_DecayIncluded.Contains(';ModuleSDK;'))" />
+</Project>

@@ -1,0 +1,31 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <OutputType>Exe</OutputType>
+        <DecayRuntimeType>Standard</DecayRuntimeType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <DebugType>Portable</DebugType>
+        <DebugSymbols>true</DebugSymbols>
+        <CopyOutputSymbolsToPublishDirectory>true</CopyOutputSymbolsToPublishDirectory>
+        <IncludeSymbolsInSingleFile>true</IncludeSymbolsInSingleFile>
+        <IlcGenerateStackTraceData>true</IlcGenerateStackTraceData>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug' And '$(UseWinExeForDebug)' == 'True'">
+        <OutputType>WinExe</OutputType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DebugType>None</DebugType>
+        <DebugSymbols>false</DebugSymbols>
+        <CopyOutputSymbolsToPublishDirectory>false</CopyOutputSymbolsToPublishDirectory>
+        <IncludeSymbolsInSingleFile>false</IncludeSymbolsInSingleFile>
+        <IlcGenerateStackTraceData>false</IlcGenerateStackTraceData>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release' And '$(UseWinExeForRelease)' == 'True'">
+        <OutputType>WinExe</OutputType>
+    </PropertyGroup>
+</Project>

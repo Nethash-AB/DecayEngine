@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>Module</DecayProjectType>
+        <DecayIncludeMinimal>True</DecayIncludeMinimal>
+        <DecayDesktop>True</DecayDesktop>
+        <DecayAndroid>True</DecayAndroid>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Engines\DecayEngine.StubEngines\DecayEngine.StubEngines.csproj" />
+    </ItemGroup>
+
+    <Import Project="..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

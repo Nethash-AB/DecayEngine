@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <pbrMaterial id="chassis_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="chassis_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="exhaust_right_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="exhaust_right_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="exhaust_left_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="exhaust_left_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="protector_right_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="protector_right_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="protector_left_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="protector_left_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="bumper_front_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="bumper_front_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="axle_rear_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="axle_rear_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="axle_front_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="axle_front_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="barrel_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="barrel_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="plank2_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="plank2_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="plank1_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="plank1_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="wheel_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="wheel_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+    <pbrMaterial id="bumper_front_detail_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="bumper_front_detail_diffuse" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="lazy_ass_normal" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+</resources>

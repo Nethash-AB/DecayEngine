@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <pbrMaterial id="platform_material">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="platform_active_texture" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="platform_bump_texture" />
+                </normal>
+                <metallicity>
+                    <factor>0</factor>
+                </metallicity>
+                <roughness>
+                    <factor>0</factor>
+                </roughness>
+                <emission>
+                    <resource id="platform_emissive" />
+                    <color x="1" y="1" z="1" w="1" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+</resources>

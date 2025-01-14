@@ -1,0 +1,9 @@
+[submodule "WinRT/SDL2"]
+	path = WinRT/SDL2
+	url = git@bitbucket.org:nethash/sdl2.git
+[submodule "WinRT/ANGLE"]
+	path = WinRT/ANGLE
+	url = git@bitbucket.org:nethash/angle.git
+[submodule "Engines/DecayEngine.Bullet/DecayEngine.Bullet.Native/bullet3"]
+	path = Engines/DecayEngine.Bullet/DecayEngine.Bullet.Native/bullet3
+	url = https://github.com/bilenkonito/bullet3.git

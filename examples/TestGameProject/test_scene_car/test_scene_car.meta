@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <scene id="test_scene_car">
+        <children>
+            <component type="cameraPersp" name="scene_camera_persp" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="-2" />
+                        <rotation x="0" y="0" z="0" />
+                    </transform>
+                    <zNear>0.1</zNear>
+                    <zFar>100</zFar>
+                    <fov>1.5707963267948966192313216916398</fov>
+                    <isAudioListener>true</isAudioListener>
+                    <renderToScreen>true</renderToScreen>
+                </properties>
+            </component>
+
+            <component type="cameraOrtho" name="scene_camera_ortho" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="-2" />
+                        <rotation x="0" y="0" z="0" />
+                    </transform>
+                    <zNear>0.1</zNear>
+                    <zFar>100</zFar>
+                    <isAudioListener>false</isAudioListener>
+                    <renderToScreen>true</renderToScreen>
+                </properties>
+            </component>
+
+            <gameObject name="test_car" active="true">
+                <template>
+                    <resource id="test_car_prefab" />
+                </template>
+                <properties>
+                    <transform>
+                        <position x="-2" y="0" z="0" />
+                        <rotation x="0" y="0" z="90" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+            </gameObject>
+
+            <gameObject name="test_text" active="true">
+                <template>
+                    <resource id="test_text_prefab" />
+                </template>
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+            </gameObject>
+
+<!--            <gameObject name="test_explosion" active="true">-->
+<!--                <template>-->
+<!--                    <resource id="test_prefab" />-->
+<!--                </template>-->
+<!--                <properties>-->
+<!--                    <transform>-->
+<!--                        <position x="0" y="0" z="0" />-->
+<!--                        <rotation x="0" y="0" z="90" />-->
+<!--                        <scale x="1" y="1" z="1" />-->
+<!--                    </transform>-->
+<!--                </properties>-->
+<!--            </gameObject>-->
+        </children>
+    </scene>
+</resources>

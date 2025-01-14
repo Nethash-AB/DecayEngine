@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project=".\DecayEngine.Dependency.targets" />
+
+    <ItemGroup>
+<!--        <PackageReference Include="Microsoft.CSharp" Version="$(MicrosoftCSharpVersion)" />-->
+<!--        <PackageReference Include="System.Runtime" Version="$(SystemRuntimeVersion)" />-->
+<!--        <PackageReference Include="System.Runtime.Loader" Version="$(SystemRuntimeVersion)" />-->
+    </ItemGroup>
+</Project>

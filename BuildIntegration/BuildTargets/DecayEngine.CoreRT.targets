@@ -1,0 +1,25 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Project=".\DecayEngine.Executable.targets" />
+
+    <PropertyGroup>
+        <IsPackable>false</IsPackable>
+        <ExperimentalDynamicCodeSupport>true</ExperimentalDynamicCodeSupport>
+        <IlcDisableReflection>false</IlcDisableReflection>
+        <IlcGenerateCompleteTypeMetadata>true</IlcGenerateCompleteTypeMetadata>
+        <RootAllApplicationAssemblies>false</RootAllApplicationAssemblies>
+        <IlcScanReflection>true</IlcScanReflection>
+        <IlcOptimizationPreference>Speed</IlcOptimizationPreference>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.DotNet.ILCompiler" Version="$(CoreRTCompilerVersion)" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <RdXmlFile Include="$(MSBuildProjectDirectory)\rd.xml" />
+    </ItemGroup>
+
+    <Target Name="CopyClrCompressionDll" AfterTargets="Publish">
+        <Copy SourceFiles="$(IlcPath)\framework\clrcompression.dll" DestinationFolder="$(PublishDir)" />
+    </Target>
+</Project>

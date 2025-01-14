@@ -1,0 +1,85 @@
+<exporter version="1.0">
+    <!-- identifier of the exporter -->
+    <name>decay2d</name>
+	
+    <!-- display name of the exporter for the combo box -->
+    <displayName>Decay Engine 2D</displayName>
+	
+    <!-- description of the exporter -->
+    <description>DecPak compiler format for Decay Engine 2D</description>
+
+    <!-- exporter version -->
+    <version>1.0</version>
+	
+    <files>
+        <file>
+            <!-- name of this file variable -->
+            <name>meta</name>
+
+            <!-- human readable name (for GUI) -->
+            <displayName>Output Resource Meta File</displayName>
+
+            <!-- file extension for the file -->
+            <fileExtension>meta</fileExtension>
+
+            <!-- description what the file contains, used in tooltips in the GUI -->
+            <description>Resource metadata file</description>
+
+            <!-- name of the template file -->
+            <template>template.xml</template>
+        </file>
+    </files>
+
+    <!-- target framework supports trimming -->
+    <supportsTrimming>false</supportsTrimming>
+
+    <supportsPolygonPacking>true</supportsPolygonPacking>
+
+    <!-- target framework supports rotated sprites -->
+    <supportsRotation>false</supportsRotation>
+
+    <!-- rotated sprites direction (cw/ccw) -->
+    <rotationDirection>cw</rotationDirection>
+
+    <!-- supports npot sizes -->
+    <supportsNPOT>false</supportsNPOT>
+    
+    <supportsPolygonPacking>true</supportsPolygonPacking>
+
+    <spriteOrigin>BottomLeft</spriteOrigin>
+
+    <textureSizeFactor>4</textureSizeFactor>
+
+    <ensureIntegerCenterOffset>true</ensureIntegerCenterOffset>
+
+    <supportsTrimSpriteNames>yes</supportsTrimSpriteNames>
+
+    <supportsTextureSubPath>no</supportsTextureSubPath>
+
+    <defaults>
+      <trimMode>Polygon</trimMode>
+      <sizeConstraints>POT</sizeConstraints>
+      <!-- <forceSquared>true</forceSquared> -->
+    </defaults>
+    
+    <properties>
+        <property>
+            <!-- Property name, used in tps file + exporter template: -->
+            <name>materialid</name>
+            <!-- Property type, supported values: string, bool -->
+            <type>string</type>
+            <!-- Default value for new projects -->
+            <default>default_material</default>
+            <!-- Name and tooltip text used for the input field in the UI: -->
+            <displayName>Material ID</displayName>
+            <toolTip>ID to reference the material resource from within Decay Engine.</toolTip>
+            <!-- Only displayed if advanced settings are expanded (small triangle
+                 in front of Data settings) -->
+            <isAdvanced>false</isAdvanced>
+        </property>
+        <!-- more <property>s can be defined here -->
+    </properties>
+
+</exporter>
+
+

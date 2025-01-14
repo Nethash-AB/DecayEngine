@@ -1,0 +1,18 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <TargetFramework>uap10.0.17134</TargetFramework>
+        <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+        <OutputType>Library</OutputType>
+        <DecayRuntimeType>WinRT</DecayRuntimeType>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <OutDir>bin\x64\$(Configuration)\</OutDir>
+        <GenerateProjectSpecificOutputFolder>false</GenerateProjectSpecificOutputFolder>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <ExtrasUwpMetaPackageVersion>6.2.8</ExtrasUwpMetaPackageVersion>
+    </PropertyGroup>
+</Project>

@@ -1,0 +1,30 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <DecayRootDirectory>$(MSBuildThisFileDirectory)..\</DecayRootDirectory>
+        <DecayTargetsDirectory>$(MSBuildThisFileDirectory)BuildTargets\</DecayTargetsDirectory>
+        <DecayIncludesDirectory>$(MSBuildThisFileDirectory)Includes\</DecayIncludesDirectory>
+        <DecayUtilsDirectory>$(MSBuildThisFileDirectory)Utils\</DecayUtilsDirectory>
+    </PropertyGroup>
+
+    <Import Project="$(DecayTargetsDirectory)DecayEngine.Common.targets" />
+    <Import Project="$(DecayUtilsDirectory)DecayEngine.PackageVersions.targets" />
+
+    <Import Project="$(DecayTargetsDirectory)DecayEngine.WinRTApp.targets" Condition="'$(DecayProjectType)' == 'WinRTApp'" />
+    <Import Project="$(DecayTargetsDirectory)DecayEngine.WinRTModule.targets" Condition="'$(DecayProjectType)' == 'WinRTModule'" />
+    <Import Project="$(DecayTargetsDirectory)DecayEngine.CoreRT.targets" Condition="'$(DecayProjectType)' == 'CoreRT'" />
+    <Import Project="$(DecayTargetsDirectory)DecayEngine.Module.targets" Condition="'$(DecayProjectType)' == 'Module'" />
+    <Import Project="$(DecayTargetsDirectory)DecayEngine.AndroidModule.targets" Condition="'$(DecayProjectType)' == 'AndroidModule'" />
+    <Import Project="$(DecayTargetsDirectory)DecayEngine.Managed.targets" Condition="'$(DecayProjectType)' == 'Managed'" />
+    <Import Project="$(DecayTargetsDirectory)DecayEngine.AndroidApp.targets" Condition="'$(DecayProjectType)' == 'AndroidApp'" />
+    <Import Project="$(DecayTargetsDirectory)DecayEngine.Dependency.targets" Condition="'$(DecayProjectType)' == 'Dependency' Or '$(DecayProjectType)' == ''" />
+
+    <Import Project="$(DecayTargetsDirectory)DecayEngine.Includes.targets" />
+
+    <Target Name="_DecayRemoveRuntimeIdentifierFromSolutionDependencies" AfterTargets="AssignProjectConfiguration">
+        <ItemGroup>
+            <ProjectReferenceWithConfiguration Condition="'%(ProjectReferenceWithConfiguration.ReferenceSourceTarget)' != 'ProjectReference'">
+                <GlobalPropertiesToRemove>%(ProjectReferenceWithConfiguration.GlobalPropertiesToRemove);RuntimeIdentifier</GlobalPropertiesToRemove>
+            </ProjectReferenceWithConfiguration>
+        </ItemGroup>
+    </Target>
+</Project>

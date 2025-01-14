@@ -1,0 +1,54 @@
+<Directives>
+        <Application>
+                <Assembly Name="System.Collections" Dynamic="Required All" />
+                <Assembly Name="System.Runtime.CompilerServices.Unsafe" Dynamic="Required All" />
+                <Assembly Name="System.IO.Compression" Dynamic="Required All" />
+                <Assembly Name="System.IO.UnmanagedMemoryStream" Dynamic="Required All" />
+                <Assembly Name="System.Threading.Tasks.Parallel" Dynamic="Required All" />
+                <Assembly Name="System.ValueTuple" Dynamic="Required All" />
+                <Assembly Name="System.Buffers" Dynamic="Required All" />
+                <Assembly Name="System.Memory" Dynamic="Required All" />
+                <Assembly Name="System.Dynamic.Runtime" Dynamic="Required All" />
+                <Assembly Name="System.Reflection" Dynamic="Required All" />
+                <Assembly Name="System.Reflection.TypeExtensions" Dynamic="Required All" />
+                <Assembly Name="System.Resources.ResourceManager" Dynamic="Required All" />
+                <Assembly Name="System.Runtime" Dynamic="Required All" />
+                <Assembly Name="System.Runtime.Loader" Dynamic="Required All" />
+                <Assembly Name="Microsoft.CSharp" Dynamic="Required All" />
+
+                <Assembly Name="DecayEngine.DecPakLib" Dynamic="Required All" Activate="Required All" />
+                <Assembly Name="protobuf-net" Dynamic="Required All" />
+
+                <Assembly Name="DecayEngine.Bullet" Dynamic="Required All" Activate="Required All"/>
+
+                <Assembly Name="DecayEngine.Core" Dynamic="Required All" Activate="Required All"/>
+
+                <Assembly Name="DecayEngine.Fmod" Dynamic="Required All" Activate="Required All"/>
+
+                <Assembly Name="DecayEngine.Javascript" Dynamic="Required All" Activate="Required All" />
+                <Assembly Name="NiL.JS" Dynamic="Required All" Activate="Required All" />
+
+                <Assembly Name="DecayEngine.ModuleSDK" Dynamic="Required All" Activate="Required All" >
+                        <Type Name="DecayEngine.ModuleSDK.Exports.ManagedExportType[]" Dynamic="Required All" Activate="Required All" />
+                        <Type Name="DecayEngine.ModuleSDK.Logging.LogSeverity[]" Dynamic="Required All" Activate="Required All" />
+                        <Type Name="DecayEngine.ModuleSDK.Exports.BaseExports.Sound.SoundPlaybackStatus[]" Dynamic="Required All" Activate="Required All" />
+                </Assembly>
+
+                <Assembly Name="DecayEngine.OpenGL" Dynamic="Required All" Activate="Required All"/>
+
+                <Assembly Name="DecayEngine.Tween" Dynamic="Required All" Activate="Required All" >
+                        <Type Name="DecayEngine.Tween.Exports.Tween.TweenType[]" Dynamic="Required All" Activate="Required All" />
+                        <Type Name="DecayEngine.Tween.Exports.Tween.TweenEaseType[]" Dynamic="Required All" Activate="Required All" />
+                </Assembly>
+
+                <Assembly Name="DecayEngine.Standalone" Dynamic="Required All" Activate="Required All" />
+                <Assembly Name="CommandLine" Dynamic="Required All" Activate="Required All" />
+                
+                <Assembly Name="System.Private.CoreLib">
+                        <Type Name="System.Action`2[System.Object,System.EventArgs]`">
+                                <Method Name="Invoke" Dynamic="Required All" />
+                        </Type>
+                        <Type Name="System.Array" Dynamic="Required All" Activate="Required All" />
+                </Assembly>
+        </Application>
+</Directives>

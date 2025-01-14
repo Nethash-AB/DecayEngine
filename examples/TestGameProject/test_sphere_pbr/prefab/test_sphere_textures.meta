@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <texture2d id="albedoTexture">
+        <properties>
+            <source>./textures/albedoTexture.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="normalTexture">
+        <properties>
+            <source>./textures/normalTexture.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="metallicityTexture">
+        <properties>
+            <source>./textures/metallicityTexture.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="roughnessTexture">
+        <properties>
+            <source>./textures/roughnessTexture.dds</source>
+        </properties>
+    </texture2d>
+</resources>

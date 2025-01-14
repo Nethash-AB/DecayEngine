@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <prefab id="test_car_prefab">
+        <children>
+            <component type="animatedMaterial" name="body_material" active="true">
+                <template>
+                    <resource id="test_car_material" />
+                </template>
+            </component>
+
+            <component type="shaderProgram" name="body_program" active="true">
+                <template>
+                    <resource id="default_shader_program" />
+                </template>
+            </component>
+
+            <component type="script" name="car_script" active="true">
+                <template>
+                    <resource id="test_car_script" />
+                </template>
+                <properties>
+                    <injections>
+                        <injection id="rigidBody">
+                            <this>
+                                <components>
+                                    <ofType type="rigidBody">
+                                        <first />
+                                    </ofType>
+                                </components>
+                            </this>
+                        </injection>
+                        <injection id="sprite1">
+                            <this>
+                                <components>
+                                    <ofType type="animatedSprite">
+                                        <withName name="body_sprite">
+                                            <first />
+                                        </withName>
+                                    </ofType>
+                                </components>
+                            </this>
+                        </injection>
+                        <injection id="camera">
+                            <activeScene>
+                                <components>
+                                    <ofType type="cameraPersp">
+                                        <first />
+                                    </ofType>
+                                </components>
+                            </activeScene>
+                        </injection>
+                    </injections>
+                </properties>
+            </component>
+
+            <component type="rigidBody" name="body_rb" active="true">
+                <template>
+                    <resource id="test_car_body" />
+                </template>
+            </component>
+
+            <component type="animatedSprite" name="body_sprite" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                    <material>
+                        <this>
+                            <components>
+                                <ofType type="animatedMaterial">
+                                    <withName name="body_material">
+                                        <first />
+                                    </withName>
+                                </ofType>
+                            </components>
+                        </this>
+                    </material>
+                    <shaderProgram>
+                        <this>
+                            <components>
+                                <ofType type="shaderProgram">
+                                    <withName name="body_program">
+                                        <first />
+                                    </withName>
+                                </ofType>
+                            </components>
+                        </this>
+                    </shaderProgram>
+                    <camera>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraPersp">
+                                    <withName name="scene_camera_persp">
+                                        <first />
+                                    </withName>
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </camera>
+                </properties>
+            </component>
+        </children>
+    </prefab>
+</resources>

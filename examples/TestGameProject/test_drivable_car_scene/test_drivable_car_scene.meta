@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <scene id="test_drivable_car_scene">
+        <children>
+            <component type="cameraPersp" name="scene_camera_persp" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="2" z="6" />
+                        <rotation x="0" y="0" z="0" />
+                    </transform>
+                    <zNear>0.1</zNear>
+                    <zFar>100</zFar>
+                    <fov>1.5707963267948966192313216916398</fov>
+                    <isAudioListener>true</isAudioListener>
+                    <isPbr>true</isPbr>
+                    <environmentTexture>
+                        <resource id="test_cubemap_texture" />
+                    </environmentTexture>
+                    <renderToScreen>true</renderToScreen>
+                </properties>
+            </component>
+
+            <component type="cameraOrtho" name="scene_camera_ortho" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                    </transform>
+                    <zNear>0.1</zNear>
+                    <zFar>100</zFar>
+                    <isAudioListener>false</isAudioListener>
+                    <renderToScreen>true</renderToScreen>
+                </properties>
+            </component>
+
+            <gameObject name="debug_text_label" active="true">
+                <children>
+                    <component type="shaderProgram" name="debug_text_shader_program" active="true">
+                        <template>
+                            <resource id="debug_text_shader_program" />
+                        </template>
+                    </component>
+                    <component type="textSprite" name="text_sprite" active="true">
+                        <template>
+                            <resource id="test_font" />
+                        </template>
+                        <properties>
+                            <text></text>
+                            <alignment>horizontalLeft|verticalTop</alignment>
+                            <color>black</color>
+                            <fontSize>5</fontSize>
+                            <characterSeparation>0.75</characterSeparation>
+                            <whiteSpaceSeparation>0.75</whiteSpaceSeparation>
+                            <transform mode="orthoRelative">
+                                <position x="-0.99" y="-0.95" z="0" />
+                                <rotation x="0" y="0" z="0" />
+                                <scale x="1" y="1" z="1" />
+                            </transform>
+                            <shaderProgram>
+                                <this>
+                                    <components>
+                                        <ofType type="shaderProgram">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </this>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraOrtho">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+
+<!--            <gameObject name="sun_go" active="true">-->
+<!--                <properties>-->
+<!--                    <transform>-->
+<!--                        <position x="0" y="0" z="0" />-->
+<!--                        <rotation x="90" y="0" z="0" />-->
+<!--                        <scale x="1" y="1" z="1" />-->
+<!--                    </transform>-->
+<!--                </properties>-->
+<!--                <children>-->
+<!--                    <component type="lightDirectional" name="sun_light" active="true">-->
+<!--                        <properties>-->
+<!--                            <strength>7</strength>-->
+<!--                            <color>white</color>-->
+<!--                            <camera>-->
+<!--                                <activeScene>-->
+<!--                                    <components>-->
+<!--                                        <ofType type="cameraPersp">-->
+<!--                                            <first />-->
+<!--                                        </ofType>-->
+<!--                                    </components>-->
+<!--                                </activeScene>-->
+<!--                            </camera>-->
+<!--                        </properties>-->
+<!--                    </component>-->
+<!--                </children>-->
+<!--            </gameObject>-->
+
+<!--            <gameObject name="test_rr_car" active="true">-->
+<!--                <template>-->
+<!--                    <resource id="test_rr_car" />-->
+<!--                </template>-->
+<!--                <properties>-->
+<!--                    <transform>-->
+<!--                        <position x="0" y="0" z="0" />-->
+<!--                        <rotation x="-90" y="0" z="0" />-->
+<!--                        <scale x="0.25" y="0.25" z="0.25" />-->
+<!--                    </transform>-->
+<!--                </properties>-->
+<!--            </gameObject>-->
+        </children>
+    </scene>
+</resources>

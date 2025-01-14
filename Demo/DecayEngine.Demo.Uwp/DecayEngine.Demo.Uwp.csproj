@@ -1,0 +1,121 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras" ToolsVersion="Current">
+    <ItemDefinitionGroup>
+        <Page>
+            <SubType>Designer</SubType>
+            <Generator>MSBuild:Compile</Generator>
+        </Page>
+        <Resource>
+            <SubType>Designer</SubType>
+            <Generator>MSBuild:Compile</Generator>
+        </Resource>
+        <ApplicationDefinition>
+            <SubType>Designer</SubType>
+            <Generator>MSBuild:Compile</Generator>
+        </ApplicationDefinition>
+    </ItemDefinitionGroup>
+
+    <PropertyGroup>
+        <ProjectGuid>{EF60107F-9D1E-41C8-852B-9AC6265EDFB4}</ProjectGuid>
+        <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+        <TargetFramework>uap10.0.17134</TargetFramework>
+        <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+        <OutputType>AppContainerExe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <FileAlignment>512</FileAlignment>
+        <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+        <PlatformTarget>x64</PlatformTarget>
+
+        <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+        <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+        <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+        <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+
+        <ExtrasEnableDefaultXamlItems>true</ExtrasEnableDefaultXamlItems>
+        <ExtrasEnableUserControlDesigner>true</ExtrasEnableUserControlDesigner>
+        <ExtrasEnableDefaultPageItems>true</ExtrasEnableDefaultPageItems>
+        <SetLinkMetadataAutomatically>true</SetLinkMetadataAutomatically>
+
+        <ExtrasXamlCodeGeneratorTool>MSBuild:Compile</ExtrasXamlCodeGeneratorTool>
+        <ExtrasXamlIntelliSenseGeneratorTool>XamlIntelliSenseFileGenerator</ExtrasXamlIntelliSenseGeneratorTool>
+        <Configurations>Debug;Release</Configurations>
+        <Platforms>x64</Platforms>
+        <Prefer32Bit>true</Prefer32Bit>
+        <UseVSHostingProcess>false</UseVSHostingProcess>
+        <Win32Resource>SDL2-WinRTResources.res</Win32Resource>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <AppxPackageSigningEnabled>true</AppxPackageSigningEnabled>
+        <PackageCertificateKeyFile>TemporaryKey.pfx</PackageCertificateKeyFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <DebugSymbols>true</DebugSymbols>
+        <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+        <NoWarn>;2008</NoWarn>
+        <DebugType>full</DebugType>
+        <UseVSHostingProcess>false</UseVSHostingProcess>
+        <ErrorReport>prompt</ErrorReport>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+        <Optimize>true</Optimize>
+        <NoWarn>;2008</NoWarn>
+        <DebugType>pdbonly</DebugType>
+        <ErrorReport>prompt</ErrorReport>
+        <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <ExtrasUwpMetaPackageVersion>6.2.8</ExtrasUwpMetaPackageVersion>
+    </PropertyGroup>
+
+<!--    <ItemGroup>-->
+<!--        <Content Include="lib\d3dcompiler_47.dll" Link="%(Filename)%(Extension)" Visible="False" />-->
+<!--        <Content Include="lib\libEGL.dll" Link="%(Filename)%(Extension)" Visible="False" />-->
+<!--        <Content Include="lib\libGLESv2.dll" Link="%(Filename)%(Extension)" Visible="False" />-->
+<!--        <Content Include="lib\SDL2.dll" Link="%(Filename)%(Extension)" Visible="False" />-->
+<!--    </ItemGroup>-->
+
+    <ItemGroup>
+        <Content Include="Assets\*" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="Properties\Default.rd.xml" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Properties\AssemblyInfo.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <AppxManifest Include="Package.appxmanifest">
+            <SubType>Designer</SubType>
+        </AppxManifest>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectCapability Include="WindowsXaml;WindowsXamlPage;WindowsXamlCodeBehind;WindowsXamlResourceDictionary;WindowsXamlUserControl" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="libEGL">
+        <HintPath>..\..\WinRT\ANGLE\bin\Debug\libEGL.winmd</HintPath>
+      </Reference>
+      <Reference Include="libGLESv2">
+        <HintPath>..\..\WinRT\ANGLE\bin\Debug\libGLESv2.winmd</HintPath>
+      </Reference>
+      <Reference Include="SDL2">
+        <HintPath>..\..\WinRT\SDL2\bin\Debug\SDL2.winmd</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Engines\DecayEngine.SDL2\DecayEngine.SDL2.Native\DecayEngine.SDL2.Native.csproj" />
+      <ProjectReference Include="..\..\Engines\DecayEngine.SDL2\DecayEngine.SDL2.WinRT\DecayEngine.SDL2.WinRT.csproj" />
+    </ItemGroup>
+</Project>

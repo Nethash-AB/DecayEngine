@@ -1,0 +1,23 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <ProjectReference Include="$(DecayRootDirectory)Engines\DecayEngine.OpenGL\*.csproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.OpenGL'" />
+
+        <ProjectReference Include="$(DecayRootDirectory)WinRT\ANGLE\winrt\10\src\libEGL.vcxproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.OpenGL' And '$(DecayProjectType)' == 'WinRTApp'" >
+            <Project>{229c8ccc-d35c-ecdb-2b0c-27ee2cac295b}</Project>
+            <Name>libEGL</Name>
+        </ProjectReference>
+        <ProjectReference Include="$(DecayRootDirectory)WinRT\ANGLE\winrt\10\src\libGLESv2.vcxproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.OpenGL' And '$(DecayProjectType)' == 'WinRTApp'" >
+            <Project>{5cf061c0-ea5a-323e-2ffb-145a0c3d60a5}</Project>
+            <Name>libGLESv2</Name>
+        </ProjectReference>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <_DecayIncluded>$(_DecayIncluded)OpenGL;</_DecayIncluded>
+    </PropertyGroup>
+
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.ModuleSDK.targets" Condition="!$(_DecayIncluded.Contains(';ModuleSDK;'))" />
+</Project>

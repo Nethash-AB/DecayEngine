@@ -1,0 +1,24 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <ProjectReference Include="$(DecayRootDirectory)Core\DecayEngine.ModuleSDK\*.csproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.ModuleSDK'" />
+
+        <PackageReference Include="SixLabors.ImageSharp" Version="$(ImageSharpVersion)" />
+        <PackageReference Include="SixLabors.ImageSharp.Drawing" Version="$(ImageSharpVersion)" />
+        <PackageReference Include="SixLabors.Shapes.Text" Version="$(ImageSharpShapesVersion)" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(DecayRuntimeType)' == 'WinRT'">
+        <PackageReference Include="System.Threading" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(DecayRuntimeType)' != 'WinRT'">
+        <PackageReference Include="System.Threading" Version="4.3.0" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <_DecayIncluded>$(_DecayIncluded)ModuleSDK;</_DecayIncluded>
+    </PropertyGroup>
+
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.DecPakLib.targets" Condition="!$(_DecayIncluded.Contains(';DecPakLib;'))" />
+</Project>

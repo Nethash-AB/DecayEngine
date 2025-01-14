@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <scene id="test_maya_export_scene">
+        <children>
+            <component type="cameraPersp" name="scene_camera_persp" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="2" z="6" />
+                        <rotation x="0" y="0" z="0" />
+                    </transform>
+                    <zNear>0.1</zNear>
+                    <zFar>100</zFar>
+                    <fov>1.5707963267948966192313216916398</fov>
+                    <isAudioListener>true</isAudioListener>
+                    <isPbr>true</isPbr>
+                    <environmentTexture>
+                        <resource id="test_cubemap_texture" />
+                    </environmentTexture>
+                    <renderToScreen>true</renderToScreen>
+                </properties>
+            </component>
+
+            <component type="cameraOrtho" name="scene_camera_ortho" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                    </transform>
+                    <zNear>0.1</zNear>
+                    <zFar>100</zFar>
+                    <isAudioListener>false</isAudioListener>
+                    <renderToScreen>true</renderToScreen>
+                </properties>
+            </component>
+
+            <component type="script" name="script_scene" active="false">
+                <template>
+                    <resource id="test_maya_export_scene_script" />
+                </template>
+                <properties>
+                    <injections>
+                        <injection id="testCarGameObject">
+                            <this>
+                                <children>
+                                    <withName name="test_rr_car">
+                                        <first />
+                                    </withName>
+                                </children>
+                            </this>
+                        </injection>
+                        <injection id="sphereGameObject">
+                            <this>
+                                <children>
+                                    <withName name="test_sphere">
+                                        <first />
+                                    </withName>
+                                </children>
+                            </this>
+                        </injection>
+                        <injection id="platformGameObject">
+                            <this>
+                                <children>
+                                    <withName name="test_platform">
+                                        <first />
+                                    </withName>
+                                </children>
+                            </this>
+                        </injection>
+                        <injection id="debugTextLabelGameObject">
+                            <this>
+                                <children>
+                                    <withName name="debug_text_label">
+                                        <first />
+                                    </withName>
+                                </children>
+                            </this>
+                        </injection>
+                    </injections>
+                </properties>
+            </component>
+
+            <gameObject name="test_light_go" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="2" z="6" />
+                        <rotation x="-13.2" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="lightPoint" name="test_pointlight" active="false">
+                        <properties>
+                            <strength>100</strength>
+                            <color>white</color>
+                            <radius>8</radius>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                    <component type="lightDirectional" name="test_directionallight" active="true">
+                        <properties>
+                            <strength>7</strength>
+                            <color>white</color>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                    <component type="lightSpot" name="test_spotlight" active="false">
+                        <properties>
+                            <strength>200</strength>
+                            <color>white</color>
+                            <radius>40</radius>
+                            <cutoffAngle>45</cutoffAngle>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+
+            <gameObject name="debug_text_label" active="true">
+                <children>
+                    <component type="shaderProgram" name="debug_text_shader_program" active="true">
+                        <template>
+                            <resource id="debug_text_shader_program" />
+                        </template>
+                    </component>
+                    <component type="textSprite" name="text_sprite" active="true">
+                        <template>
+                            <resource id="test_font" />
+                        </template>
+                        <properties>
+                            <text></text>
+                            <alignment>horizontalLeft|verticalTop</alignment>
+                            <color>black</color>
+                            <fontSize>5</fontSize>
+                            <characterSeparation>0.75</characterSeparation>
+                            <whiteSpaceSeparation>0.75</whiteSpaceSeparation>
+                            <transform mode="orthoRelative">
+                                <position x="-0.99" y="-0.95" z="0" />
+                                <rotation x="0" y="0" z="0" />
+                                <scale x="1" y="1" z="1" />
+                            </transform>
+                            <shaderProgram>
+                                <this>
+                                    <components>
+                                        <ofType type="shaderProgram">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </this>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraOrtho">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+
+            <gameObject name="test_rr_car" active="false">
+                <template>
+                    <resource id="test_rr_car" />
+                </template>
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="0.25" y="0.25" z="0.25" />
+                    </transform>
+                </properties>
+            </gameObject>
+
+            <gameObject name="test_sphere" active="false">
+                <template>
+                    <resource id="test_sphere" />
+                </template>
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="0.2" y="0.2" z="0.2" />
+                    </transform>
+                </properties>
+            </gameObject>
+
+            <gameObject name="test_platform" active="false">
+                <template>
+                    <resource id="platform" />
+                </template>
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="0.25" y="0.25" z="0.25" />
+                    </transform>
+                </properties>
+            </gameObject>
+
+<!--            <component type="sound" name="music_sound" active="false">-->
+<!--                <template>-->
+<!--                    <resource id="test_music_sound" />-->
+<!--                </template>-->
+<!--                <properties>-->
+<!--                    <transform>-->
+<!--                        <position x="0" y="0" z="0" />-->
+<!--                        <rotation x="0" y="0" z="0" />-->
+<!--                    </transform>-->
+<!--                    <autoPlayOnActive>true</autoPlayOnActive>-->
+<!--                </properties>-->
+<!--            </component>-->
+
+<!--            <gameObject name="test_light_gizmo" active="true">-->
+<!--                <template>-->
+<!--                    <resource id="test_light_gizmo" />-->
+<!--                </template>-->
+<!--                <properties>-->
+<!--                    <transform>-->
+<!--                        <position x="0" y="0" z="0" />-->
+<!--                        <rotation x="0" y="0" z="0" />-->
+<!--                        <scale x="1" y="1" z="1" />-->
+<!--                    </transform>-->
+<!--                </properties>-->
+<!--            </gameObject>-->
+        </children>
+    </scene>
+</resources>

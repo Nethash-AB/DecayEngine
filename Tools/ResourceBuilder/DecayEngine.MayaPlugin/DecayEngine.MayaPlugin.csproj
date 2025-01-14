@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>Dependency</DecayProjectType>
+        <DecayIncludeMinimal>True</DecayIncludeMinimal>
+        <DecayInclude>ResourceBuilderLib;ModuleSDK</DecayInclude>
+        <DecayDesktop>True</DecayDesktop>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <TargetExt>.nll.dll</TargetExt>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Reference Include="openmayacs, Version=19.0.7966.0, Culture=neutral, PublicKeyToken=null">
+            <HintPath>..\..\..\..\..\..\Autodesk\Maya2019\bin\openmayacs.dll</HintPath>
+            <Private>False</Private>
+        </Reference>
+        <PackageReference Include="TeximpNet" Version="1.4.1" />
+    </ItemGroup>
+
+    <Import Project="..\..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

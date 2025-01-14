@@ -1,0 +1,31 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>AndroidModule</DecayProjectType>
+        <DecayIncludeMinimal>True</DecayIncludeMinimal>
+        <DecayDesktop>False</DecayDesktop>
+        <DecayAndroid>True</DecayAndroid>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <IsBindingProject>True</IsBindingProject>
+        <AndroidSupportedAbis>armeabi-v7a;arm64-v8a;x86;x86_64</AndroidSupportedAbis>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DecayEngine.Fmod.Managed\DecayEngine.Fmod.Managed.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Jars" />
+    </ItemGroup>
+
+    <Import Project="..\..\..\BuildIntegration\DecayEngine.proj" />
+
+    <Target Name="TestLog" BeforeTargets="Build">
+        <Message Text="TargetFramework = $(TargetFramework)" Importance="high" />
+        <Message Text="TargetFrameworks = $(TargetFrameworks)" Importance="high" />
+        <Message Text="DecayRuntimeType = $(DecayRuntimeType)" Importance="high" />
+        <Message Text="TransformFile = @(TransformFile)" Importance="high" />
+        <Message Text="None = @(None)" Importance="high" />
+    </Target>
+</Project>

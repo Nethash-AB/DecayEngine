@@ -1,0 +1,26 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>AndroidApp</DecayProjectType>
+        <DecayIncludeAll>True</DecayIncludeAll>
+        <DecayDesktop>False</DecayDesktop>
+        <DecayAndroid>True</DecayAndroid>
+        <BuildTargetPlatform>Android</BuildTargetPlatform>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <AssemblyName>DecayEngine.Android</AssemblyName>
+        <RootNamespace>DecayEngine.Android</RootNamespace>
+        <AndroidSupportedAbis>armeabi-v7a;arm64-v8a;x86;x86_64</AndroidSupportedAbis>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <AndroidAsset Include="..\..\target\Data\Android\*.decmeta" />
+        <AndroidAsset Include="..\..\target\Data\Android\*.decpak" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Xamarin.Android.Support.Design" Version="27.0.2.1" />
+    </ItemGroup>
+
+    <Import Project="..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <prefab id="test_text_prefab">
+        <children>
+            <component type="shaderProgram" name="text_program" active="true">
+                <template>
+                    <resource id="default_text_shader_program" />
+                </template>
+            </component>
+
+            <component type="textSprite" name="text_sprite" active="true">
+                <template>
+                    <resource id="test_font" />
+                </template>
+                <properties>
+                    <text>Pepe\nThe\n$Green Frog😀\nWATeSpF$_PaIIL^</text>
+<!--                    <text>TEST^*"</text>-->
+<!--                    <alignment>horizontalRight|verticalBottom</alignment>-->
+                    <alignment>horizontalCenter|verticalCenter</alignment>
+                    <color>green</color>
+                    <fontSize>10</fontSize>
+                    <characterSeparation>1</characterSeparation>
+                    <whiteSpaceSeparation>1</whiteSpaceSeparation>
+                    <transform mode="orthoRelative">
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                    <shaderProgram>
+                        <this>
+                            <components>
+                                <ofType type="shaderProgram">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </this>
+                    </shaderProgram>
+                    <camera>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraOrtho">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </camera>
+                </properties>
+            </component>
+        </children>
+    </prefab>
+</resources>

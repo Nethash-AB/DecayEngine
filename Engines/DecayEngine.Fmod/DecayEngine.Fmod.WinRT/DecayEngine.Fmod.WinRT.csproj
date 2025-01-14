@@ -1,0 +1,11 @@
+﻿<Project Sdk="MSBuild.Sdk.Extras" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>WinRTModule</DecayProjectType>
+        <DecayIncludeMinimal>True</DecayIncludeMinimal>
+        <DecayInclude>Fmod</DecayInclude>
+        <DecayDesktop>False</DecayDesktop>
+        <DecayAndroid>False</DecayAndroid>
+    </PropertyGroup>
+
+    <Import Project="..\..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

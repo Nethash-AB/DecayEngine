@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <scene id="test_scene">
+        <children>
+            <component type="script" name="script_scene1" active="true">
+                <template>
+                    <resource id="test_scene_script" />
+                </template>
+            </component>
+
+            <component type="cameraPersp" name="test_camera_persp" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="-2" />
+                        <rotation x="0" y="0" z="0" />
+                    </transform>
+                    <zNear>0.1</zNear>
+                    <zFar>100</zFar>
+                    <fov>1.5707963267948966192313216916398</fov>
+                    <isAudioListener>true</isAudioListener>
+                    <renderToScreen>true</renderToScreen>
+                </properties>
+            </component>
+
+            <gameObject name="test_gameobject" active="true">
+                <template>
+                    <resource id="test_prefab" />
+                </template>
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="cameraOrtho" name="test_camera_ortho" active="true">
+                        <properties>
+                            <transform>
+                                <position x="0" y="0" z="-2" />
+                                <rotation x="0" y="0" z="0" />
+                            </transform>
+                            <zNear>0.1</zNear>
+                            <zFar>100</zFar>
+                            <renderToScreen>true</renderToScreen>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+        </children>
+    </scene>
+</resources>

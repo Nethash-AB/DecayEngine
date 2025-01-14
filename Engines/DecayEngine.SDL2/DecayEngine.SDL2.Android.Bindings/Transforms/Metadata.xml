@@ -1,0 +1,24 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+  <remove-node path="/api/package[@name='org.libsdl.app']/class[@name='SDLActivity']/field[@name='mSurface']" />
+  <remove-node path="/api/package[@name='org.libsdl.app']/class[@name='SDLActivity']/field[@name='mClipboardHandler']" />
+  <remove-node path="/api/package[@name='org.libsdl.app']/class[@name='SDLControllerManager']/field[@name='mJoystickHandler']" />
+  <remove-node path="/api/package[@name='org.libsdl.app']/class[@name='SDLControllerManager']/field[@name='mHapticHandler']" />
+<!--  <remove-node path="/api/package[@name='org.libsdl.app']/class[@name='SDLActivity']/field[@name='mMotionListener']" />-->
+
+  <!-- Remove SDL class, not needed by .NET -->
+  <remove-node path="/api/package[@name='org.libsdl.app']/class[@name='SDL']" />
+
+  <!-- Remove SDLAudioManager class, we have better ways to handle sound -->
+  <remove-node path="/api/package[@name='org.libsdl.app']/class[@name='SDLAudioManager']" />
+
+  <!-- Normalize the namespace for .NET -->
+  <attr path="/api/package[@name='org.libsdl.app']" name="managedName">DecayEngine.SDL2.Android</attr>
+</metadata>

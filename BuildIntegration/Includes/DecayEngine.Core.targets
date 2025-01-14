@@ -1,0 +1,13 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <ProjectReference Include="$(DecayRootDirectory)Core\DecayEngine.Core\*.csproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.Core'" />
+        <ProjectReference Include="$(DecayRootDirectory)Engines\DecayEngine.StubEngines\*.csproj" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <_DecayIncluded>$(_DecayIncluded)Core;</_DecayIncluded>
+    </PropertyGroup>
+
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.ModuleSDK.targets" Condition="!$(_DecayIncluded.Contains(';ModuleSDK;'))" />
+</Project>

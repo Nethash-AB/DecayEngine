@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <texture2d id="test_light_gizmo_d">
+        <properties>
+            <source>./icon_gizmo_directional_light.dds</source>
+        </properties>
+    </texture2d>
+    <animatedMaterial id="test_light_gizmo">
+        <properties>
+            <textures>
+                <diffuse>
+                    <resource id="test_light_gizmo_d" />
+                </diffuse>
+            </textures>
+            <animationFrames>
+                <frame>
+                    <vertices>
+                        <vertex x="-0.5" y="0.5" u="0.0" v="1.0" />
+                        <vertex x="-0.5" y="-0.5" u="0.0" v="0.0" />
+                        <vertex x="0.5" y="-0.5" u="1.0" v="0.0" />
+                        <vertex x="0.5" y="0.5" u="1.0" v="1.0" />
+                    </vertices>
+                    <triangles>
+                        <triangle v1="0" v2="1" v3="2" />
+                        <triangle v1="2" v2="3" v3="0" />
+                    </triangles>
+                </frame>
+            </animationFrames>
+        </properties>
+    </animatedMaterial>
+</resources>

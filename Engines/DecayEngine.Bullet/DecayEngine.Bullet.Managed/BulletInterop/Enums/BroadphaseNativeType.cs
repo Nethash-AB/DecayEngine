@@ -1,0 +1,43 @@
+namespace DecayEngine.Bullet.Managed.BulletInterop.Enums
+{
+    public enum BroadphaseNativeType
+    {
+        BoxShape,
+        TriangleShape,
+        TetrahedralShape,
+        ConvexTriangleMeshShape,
+        ConvexHullShape,
+        ConvexPointCloudShapeProxy,
+        CustomPolyhedralShape,
+        ImplicitConvexShapesStartHere,
+        SphereShape,
+        MultiSphereShape,
+        CapsuleShape,
+        ConeShape,
+        ConvexShape,
+        CylinderShape,
+        UniformScalingShape,
+        MinkowskiSumShape,
+        MinkowskiDifferenceShape,
+        Box2DShape,
+        Convex2DShape,
+        CustomConvexShape,
+        ConcaveShapesStartHere,
+        TriangleMeshShape,
+        ScaledTriangleMeshShape,
+        FastConcaveMeshProxy,
+        TerrainShape,
+        GImpactShape,
+        MultiMaterialTriangleMesh,
+        EmptyShape,
+        StaticPlaneShape,
+        CustomConcaveShape,
+        ConcaveShapesEndHere,
+        CompoundShape,
+        SoftBodyShape,
+        HffluidShapeProxy,
+        HffluidBuoyantConvexShapeProxy,
+        InvalidShapeProxy,
+        MaxBroadphaseCollisionTypes
+    }
+}

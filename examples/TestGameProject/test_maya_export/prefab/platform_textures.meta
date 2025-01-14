@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <texture2d id="platform_active_texture">
+        <properties>
+            <source>./textures/platform_active_texture.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="platform_bump_texture">
+        <properties>
+            <source>./textures/platform_bump_texture.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="platform_emissive">
+        <properties>
+            <source>./textures/platform_emissive.dds</source>
+        </properties>
+    </texture2d>
+</resources>

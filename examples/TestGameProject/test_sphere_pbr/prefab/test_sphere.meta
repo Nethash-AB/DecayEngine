@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <prefab id="test_sphere">
+        <children>
+            <gameObject name="pSphere1" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="12.0723772" y="12.0723772" z="12.0723772" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_pSphereShape1" active="true">
+                        <template>
+                            <resource id="pSphereShape1" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_StingrayBRDF">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <component type="pbrMaterial" name="material_StingrayBRDF" active="true">
+                <template>
+                    <resource id="StingrayBRDF" />
+                </template>
+            </component>
+            <component type="shaderProgram" name="default_pbr_shader_program" active="true">
+                <template>
+                    <resource id="default_pbr_shader_program" />
+                </template>
+            </component>
+        </children>
+    </prefab>
+</resources>

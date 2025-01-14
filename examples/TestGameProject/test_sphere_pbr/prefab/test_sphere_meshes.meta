@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <mesh id="pSphereShape1">
+        <properties>
+            <source>./meshes/pSphereShape1.dec3d</source>
+        </properties>
+    </mesh>
+</resources>

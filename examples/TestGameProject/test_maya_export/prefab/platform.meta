@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <prefab id="platform">
+        <children>
+            <gameObject name="rr_cod_platform" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="-0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                </properties>
+                <children>
+                    <component type="mesh" name="mesh_rr_cod_platformShape" active="true">
+                        <template>
+                            <resource id="rr_cod_platformShape" />
+                        </template>
+                        <properties>
+                            <material>
+                                <root>
+                                    <components>
+                                        <withName name="material_platform_material">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </material>
+                            <shaderProgram>
+                                <root>
+                                    <components>
+                                        <withName name="default_pbr_shader_program">
+                                            <first />
+                                        </withName>
+                                    </components>
+                                </root>
+                            </shaderProgram>
+                            <camera>
+                                <activeScene>
+                                    <components>
+                                        <ofType type="cameraPersp">
+                                            <first />
+                                        </ofType>
+                                    </components>
+                                </activeScene>
+                            </camera>
+                        </properties>
+                    </component>
+                </children>
+            </gameObject>
+            <component type="pbrMaterial" name="material_platform_material" active="true">
+                <template>
+                    <resource id="platform_material" />
+                </template>
+            </component>
+            <component type="shaderProgram" name="default_pbr_shader_program" active="true">
+                <template>
+                    <resource id="default_pbr_shader_program" />
+                </template>
+            </component>
+        </children>
+    </prefab>
+</resources>

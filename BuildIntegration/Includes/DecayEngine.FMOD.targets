@@ -1,0 +1,33 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <ProjectReference Include="$(DecayRootDirectory)Engines\DecayEngine.Fmod\DecayEngine.Fmod.Managed\*.csproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.Fmod.Managed'" />
+    </ItemGroup>
+    <Choose>
+        <When Condition="'$(DecayProjectType)' == 'AndroidApp' Or '$(DecayProjectType)' == 'AndroidModule'">
+            <ItemGroup>
+                <ProjectReference Include="$(DecayRootDirectory)Engines\DecayEngine.Fmod\DecayEngine.Fmod.Android\*.csproj"
+                                  Condition="'$(MSBuildProjectName)' != 'DecayEngine.Fmod.Android' And '$(MSBuildProjectName)' != 'DecayEngine.Fmod.Managed'" />
+            </ItemGroup>
+        </When>
+        <When Condition="'$(DecayProjectType)' == 'WinRTApp' Or '$(DecayProjectType)' == 'WinRTModule'">
+            <ItemGroup>
+                <ProjectReference Include="$(DecayRootDirectory)Engines\DecayEngine.Fmod\DecayEngine.Fmod.WinRT\*.csproj"
+                                  Condition="'$(MSBuildProjectName)' != 'DecayEngine.Fmod.WinRT' And '$(MSBuildProjectName)' != 'DecayEngine.Fmod.Managed'" />
+            </ItemGroup>
+        </When>
+        <Otherwise>
+            <ItemGroup>
+                <ProjectReference Include="$(DecayRootDirectory)Engines\DecayEngine.Fmod\DecayEngine.Fmod.Desktop\*.csproj"
+                                  Condition="'$(DecayDesktop)' == 'True' And
+                                  '$(MSBuildProjectName)' != 'DecayEngine.Fmod.Desktop' And '$(MSBuildProjectName)' != 'DecayEngine.Fmod.Managed'"/>
+            </ItemGroup>
+        </Otherwise>
+    </Choose>
+
+    <PropertyGroup>
+        <_DecayIncluded>$(_DecayIncluded)Fmod;</_DecayIncluded>
+    </PropertyGroup>
+
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.ModuleSDK.targets" Condition="!$(_DecayIncluded.Contains(';ModuleSDK;'))" />
+</Project>

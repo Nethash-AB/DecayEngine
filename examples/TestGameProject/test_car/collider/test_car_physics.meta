@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <collider2d id="test_car_body">
+        <properties>
+            <mass>1000</mass>
+            <isTrigger>false</isTrigger>
+            <isStatic>false</isStatic>
+            <isKinematic>false</isKinematic>
+            <collisionMask>00000000000000000000000000000000</collisionMask>
+            <margin>0</margin>
+            <friction>
+                <linear>0</linear>
+                <spinning>0</spinning>
+                <rolling>0</rolling>
+            </friction>
+            <anisotropicFriction x="0" y="0" z="0" />
+            <damping>
+                <linear>0</linear>
+                <angular>0</angular>
+            </damping>
+            <sleepingThereshold>
+                <linear>0</linear>
+                <angular>0</angular>
+            </sleepingThereshold>
+            <restitution>1</restitution>
+            <hull>
+                <vertex x="0.18242740134028293" y="-0.18875651526433357" />
+                <vertex x="0.17274758004467608" y="-0.4739389426656739" />
+                <vertex x="-0.1712583767684289" y="-0.4739389426656739" />
+                <vertex x="-0.18019359642591215" y="0.08897989575577066" />
+                <vertex x="-0.21593447505584512" y="0.09717051377513031" />
+                <vertex x="-0.18019359642591215" y="0.11876396128071481" />
+                <vertex x="-0.17870439314966494" y="0.4441548771407297" />
+                <vertex x="0.18019359642591215" y="0.4441548771407297" />
+                <vertex x="0.18168279970215936" y="0.11876396128071481" />
+                <vertex x="0.21891288160833955" y="0.09791511541325391" />
+                <vertex x="0.1876396128071482" y="0.08749069247952346" />
+                <vertex x="0.18242740134028293" y="-0.0383469843633656" />
+            </hull>
+        </properties>
+    </collider2d>
+</resources>

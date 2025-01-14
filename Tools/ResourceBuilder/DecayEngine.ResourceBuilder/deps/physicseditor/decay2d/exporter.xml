@@ -1,0 +1,121 @@
+<exporter>
+    <name>decay2d</name>
+    <displayName>Decay Engine 2D</displayName>
+    <description>DecPak compiler format for Decay Engine 2D</description>
+    <version>1.0</version>
+    <yAxisDirection>up</yAxisDirection>
+    <physicsEngine>generic</physicsEngine>
+    <polygonOrientation>cw</polygonOrientation>
+    <template>template.xml</template>
+    <fileExtension>meta</fileExtension>
+    <anchorPoint>
+        <enabled>yes</enabled>
+        <relX>0.5</relX>
+        <relY>0.5</relY>
+    </anchorPoint>
+    <origin>
+        <type>anchorPoint</type>
+        <relX>0.0</relX>
+        <relY>0.0</relY>
+    </origin>
+
+    <global>
+    </global>
+
+    <body>
+        <parameter>
+            <name>mass</name>
+            <displayName>Body Mass</displayName>
+            <description>The mass of the body in kilograms.</description>
+            <type>float</type>
+            <default>1.0</default>
+        </parameter>
+        <parameter>
+            <name>margin</name>
+            <displayName>Margin</displayName>
+            <description>The extra margin of the body.</description>
+            <type>float</type>
+            <default>0.03</default>
+        </parameter>
+        <parameter>
+            <name>frictionLinear</name>
+            <displayName>Linear Friction</displayName>
+            <description>The linear friction of the body.</description>
+            <type>float</type>
+            <default>1.0</default>
+        </parameter>
+        <parameter>
+            <name>frictionSpinning</name>
+            <displayName>Spinning Friction</displayName>
+            <description>The spinning friction of the body.</description>
+            <type>float</type>
+            <default>1.0</default>
+        </parameter>
+        <parameter>
+            <name>frictionRolling</name>
+            <displayName>Rolling Friction</displayName>
+            <description>The rolling friction of the body.</description>
+            <type>float</type>
+            <default>1.0</default>
+        </parameter>
+        <parameter>
+            <name>frictionAnisotropicX</name>
+            <displayName>Anisotropic Friction X</displayName>
+            <description>The anisotropic friction of the body in the X axis.</description>
+            <type>float</type>
+            <default>0.0</default>
+        </parameter>
+        <parameter>
+            <name>frictionAnisotropicY</name>
+            <displayName>Anisotropic Friction Y</displayName>
+            <description>The anisotropic friction of the body in the Y axis.</description>
+            <type>float</type>
+            <default>0.0</default>
+        </parameter>
+        <parameter>
+            <name>frictionAnisotropicZ</name>
+            <displayName>Anisotropic Friction Z</displayName>
+            <description>The anisotropic friction of the body in the Z axis.</description>
+            <type>float</type>
+            <default>0.0</default>
+        </parameter>
+        <parameter>
+            <name>dampingLinear</name>
+            <displayName>Linear Damping</displayName>
+            <description>The linear damping of the body.</description>
+            <type>float</type>
+            <default>1.0</default>
+        </parameter>
+        <parameter>
+            <name>dampingAngular</name>
+            <displayName>Angular Damping</displayName>
+            <description>The angular damping of the body.</description>
+            <type>float</type>
+            <default>1.0</default>
+        </parameter>
+        <parameter>
+            <name>sleepingTheresholdLinear</name>
+            <displayName>Linear Sleeping Thereshold</displayName>
+            <description>The linear sleeping thereshold of the body.</description>
+            <type>float</type>
+            <default>0.1</default>
+        </parameter>
+        <parameter>
+            <name>sleepingTheresholdAngular</name>
+            <displayName>Angular Sleeping Thereshold</displayName>
+            <description>The angular sleeping thereshold of the body.</description>
+            <type>float</type>
+            <default>0.1</default>
+        </parameter>
+        <parameter>
+            <name>restitution</name>
+            <displayName>Body Restitution</displayName>
+            <description>The restitution of the body.</description>
+            <type>float</type>
+            <default>1.0</default>
+        </parameter>
+    </body>
+
+    <fixture>
+    </fixture>
+</exporter>

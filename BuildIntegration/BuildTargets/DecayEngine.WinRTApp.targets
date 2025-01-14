@@ -1,0 +1,61 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <OutputType>AppContainerExe</OutputType>
+        <AppDesignerFolder>Properties</AppDesignerFolder>
+        <DefaultLanguage>en-US</DefaultLanguage>
+        <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
+        <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.17134.0</TargetPlatformVersion>
+        <TargetPlatformMinVersion>10.0.17134.0</TargetPlatformMinVersion>
+        <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
+        <FileAlignment>512</FileAlignment>
+        <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
+        <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+        <AppxPackageDir>$(MSBuildProjectDirectory)\bin\AppxPackages\</AppxPackageDir>
+        <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+        <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+        <GenerateTestArtifacts>True</GenerateTestArtifacts>
+        <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+        <PlatformTarget>x64</PlatformTarget>
+        <Prefer32Bit>false</Prefer32Bit>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+        <UseVSHostingProcess>false</UseVSHostingProcess>
+        <NoWarn>;2008</NoWarn>
+        <ErrorReport>prompt</ErrorReport>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <DecayRuntimeType>WinRT</DecayRuntimeType>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+        <DebugSymbols>true</DebugSymbols>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+        <Optimize>false</Optimize>
+        <DebugType>full</DebugType>
+        <UseDotNetNativeToolchain>false</UseDotNetNativeToolchain>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+        <DebugSymbols>false</DebugSymbols>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE;NETFX_CORE;WINDOWS_UWP</DefineConstants>
+        <Optimize>true</Optimize>
+        <DebugType>pdbonly</DebugType>
+        <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+            <Version>6.2.8</Version>
+        </PackageReference>
+    </ItemGroup>
+
+    <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
+        <VisualStudioVersion>14.0</VisualStudioVersion>
+    </PropertyGroup>
+</Project>

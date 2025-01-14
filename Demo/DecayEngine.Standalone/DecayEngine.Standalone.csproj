@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>CoreRT</DecayProjectType>
+        <DecayIncludeAll>True</DecayIncludeAll>
+        <DecayDesktop>True</DecayDesktop>
+        <DecayAndroid>False</DecayAndroid>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <ApplicationIcon>icon.ico</ApplicationIcon>
+        <UseWinExeForDebug>False</UseWinExeForDebug>
+        <UseWinExeForRelease>True</UseWinExeForRelease>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="CommandLineParser" Version="2.5.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Include="window_icon.png" />
+      <EmbeddedResource Include="icon.ico" />
+    </ItemGroup>
+
+    <Import Project="..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <prefab id="test_winrt_prefab">
+        <children>
+            <component type="sound" name="explosion_sound" active="true">
+                <template>
+                    <resource id="test_event_sound" />
+                </template>
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                    </transform>
+                    <autoPlayOnActive>false</autoPlayOnActive>
+                </properties>
+            </component>
+
+            <component type="animatedMaterial" name="mat1" active="true">
+                <template>
+                    <resource id="test_material" />
+                </template>
+            </component>
+
+            <component type="shaderProgram" name="program1" active="true">
+                <template>
+                    <resource id="default_shader_program" />
+                </template>
+            </component>
+
+            <component type="script" name="script_go" active="true">
+                <template>
+                    <resource id="test_winrt_prefab_script" />
+                </template>
+                <properties>
+                    <injections>
+                        <injection id="explosionSound">
+                            <this>
+                                <components>
+                                    <ofType type="sound">
+                                        <withName name="explosion_sound">
+                                            <first />
+                                        </withName>
+                                    </ofType>
+                                </components>
+                            </this>
+                        </injection>
+                        <injection id="spriteExplosion">
+                            <this>
+                                <components>
+                                    <ofType type="animatedSprite">
+                                        <withName name="sprite_explosion">
+                                            <first />
+                                        </withName>
+                                    </ofType>
+                                </components>
+                            </this>
+                        </injection>
+                    </injections>
+                </properties>
+            </component>
+
+            <component type="animatedSprite" name="sprite_explosion" active="false">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                    <material>
+                        <this>
+                            <components>
+                                <ofType type="animatedMaterial">
+                                    <withName name="mat1">
+                                        <first />
+                                    </withName>
+                                </ofType>
+                            </components>
+                        </this>
+                    </material>
+                    <shaderProgram>
+                        <this>
+                            <components>
+                                <ofType type="shaderProgram">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </this>
+                    </shaderProgram>
+                    <camera>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraPersp">
+                                    <first />
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </camera>
+                </properties>
+            </component>
+        </children>
+    </prefab>
+</resources>

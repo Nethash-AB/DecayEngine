@@ -1,0 +1,47 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <_DecayIncluded>;</_DecayIncluded>
+        <_DecayIncludeSelf>$(MSBuildProjectName.Replace('DecayEngine.', ''))</_DecayIncludeSelf>
+    </PropertyGroup>
+
+    <!-- Alias -->
+    <Choose>
+        <When Condition="'$(DecayIncludeAll)' == 'True'">
+            <PropertyGroup Condition="'$(DecayIncludeAll)' == 'True'">
+                <_DecayIncludeResolved>;DecPakLib;ModuleSDK;Core;Bullet;Fmod;NativeJS;OpenGL;SDL2;Tween;</_DecayIncludeResolved>
+            </PropertyGroup>
+        </When>
+        <When Condition="'$(DecayIncludeMinimal)' == 'True'">
+            <Choose>
+                <When Condition="'$(DecayProjectType)' == 'Dependency' Or '$(DecayProjectType)' == 'Module' Or '$(DecayProjectType)' == 'AndroidModule' Or '$(DecayProjectType)' == 'WinRTModule'">
+                    <PropertyGroup>
+                        <_DecayIncludeResolved>;DecPakLib;ModuleSDK;$(DecayInclude);</_DecayIncludeResolved>
+                    </PropertyGroup>
+                </When>
+                <When Condition="'$(DecayProjectType)' == 'CoreRT' Or '$(DecayProjectType)' == 'AndroidApp' Or '$(DecayProjectType)' == 'WinRTApp'">
+                    <PropertyGroup>
+                        <_DecayIncludeResolved>;DecPakLib;$(DecayInclude);</_DecayIncludeResolved>
+                    </PropertyGroup>
+                </When>
+            </Choose>
+        </When>
+        <Otherwise>
+            <PropertyGroup>
+                <_DecayIncludeResolved>;$(DecayInclude);</_DecayIncludeResolved>
+            </PropertyGroup>
+        </Otherwise>
+    </Choose>
+
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.DecPakLib.targets" Condition="$(_DecayIncludeResolved.Contains(';DecPakLib;'))" />
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.ModuleSDK.targets" Condition="$(_DecayIncludeResolved.Contains(';ModuleSDK;'))" />
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.Core.targets" Condition="$(_DecayIncludeResolved.Contains(';Core;'))" />
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.Bullet.targets" Condition="$(_DecayIncludeResolved.Contains(';Bullet;'))" />
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.Fmod.targets" Condition="$(_DecayIncludeResolved.Contains(';Fmod;'))" />
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.NativeJS.targets" Condition="$(_DecayIncludeResolved.Contains(';NativeJS;'))" />
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.OpenGL.targets" Condition="$(_DecayIncludeResolved.Contains(';OpenGL;'))" />
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.SDL2.targets" Condition="$(_DecayIncludeResolved.Contains(';SDL2;'))" />
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.Tween.targets" Condition="$(_DecayIncludeResolved.Contains(';Tween;'))" />
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.ResourceBuilderLib.targets" Condition="$(_DecayIncludeResolved.Contains(';ResourceBuilderLib;'))" />
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.$(_DecayIncludeSelf).targets"
+            Condition="Exists('$(DecayIncludesDirectory)DecayEngine.$(_DecayIncludeSelf).targets') And !$(_DecayIncluded.Contains(';$(_DecayIncludeSelf);'))" />
+</Project>

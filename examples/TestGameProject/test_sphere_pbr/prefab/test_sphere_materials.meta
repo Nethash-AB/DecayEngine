@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <pbrMaterial id="StingrayBRDF">
+        <properties>
+            <textures>
+                <albedo>
+                    <resource id="albedoTexture" />
+                    <color x="1" y="1" z="1" w="1" />
+                </albedo>
+                <normal>
+                    <resource id="normalTexture" />
+                </normal>
+                <metallicity>
+                    <resource id="metallicityTexture" />
+                    <factor>1</factor>
+                </metallicity>
+                <roughness>
+                    <resource id="roughnessTexture" />
+                    <factor>1</factor>
+                </roughness>
+                <emission>
+                    <color x="0" y="0" z="0" w="0" />
+                </emission>
+            </textures>
+        </properties>
+    </pbrMaterial>
+</resources>

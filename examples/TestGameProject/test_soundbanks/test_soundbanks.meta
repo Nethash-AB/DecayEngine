@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <!-- Desktop Banks -->
+    <soundBank id="master_soundbank_strings" platforms="desktop">
+        <properties>
+            <type>fmodstrings</type>
+            <source>./Desktop/Master.strings.bank</source>
+        </properties>
+    </soundBank>
+    <soundBank id="master_soundbank" platforms="desktop">
+        <properties>
+            <type>fmodmaster</type>
+            <source>./Desktop/Master.bank</source>
+            <requires>
+                <resource id="master_soundbank_strings" />
+            </requires>
+        </properties>
+    </soundBank>
+    <soundBank id="test_soundbank" platforms="desktop">
+        <properties>
+            <type>fmodslave</type>
+            <source>./Desktop/TestBank.bank</source>
+            <requires>
+                <resource id="master_soundbank" />
+            </requires>
+        </properties>
+    </soundBank>
+
+    <!-- Mobile Banks -->
+    <soundBank id="master_soundbank_strings" platforms="mobile">
+        <properties>
+            <type>fmodstrings</type>
+            <source>./Mobile/Master.strings.bank</source>
+        </properties>
+    </soundBank>
+    <soundBank id="master_soundbank" platforms="mobile">
+        <properties>
+            <type>fmodmaster</type>
+            <source>./Mobile/Master.bank</source>
+            <requires>
+                <resource id="master_soundbank_strings" />
+            </requires>
+        </properties>
+    </soundBank>
+    <soundBank id="test_soundbank" platforms="mobile">
+        <properties>
+            <type>fmodslave</type>
+            <source>./Mobile/TestBank.bank</source>
+            <requires>
+                <resource id="master_soundbank" />
+            </requires>
+        </properties>
+    </soundBank>
+
+    <sound id="test_event_sound">
+        <properties>
+            <bank>
+                <resource id="test_soundbank" />
+            </bank>
+            <event>event:/TestEvent</event>
+        </properties>
+    </sound>
+    <sound id="test_music_sound">
+        <properties>
+            <bank>
+                <resource id="test_soundbank" />
+            </bank>
+            <event>event:/TestMusic</event>
+        </properties>
+    </sound>
+    <sound id="test_intro_sound">
+        <properties>
+            <bank>
+                <resource id="test_soundbank" />
+            </bank>
+            <event>{2062037d-08b5-495f-a3f4-b0df58e51946}</event>
+        </properties>
+    </sound>
+</resources>

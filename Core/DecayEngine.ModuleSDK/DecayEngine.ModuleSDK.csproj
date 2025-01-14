@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="Current">
+    <PropertyGroup>
+        <DecayProjectType>Module</DecayProjectType>
+        <DecayInclude>DecPakLib;ModuleSDK</DecayInclude>
+        <DecayDesktop>True</DecayDesktop>
+        <DecayAndroid>True</DecayAndroid>
+    </PropertyGroup>
+    <ItemGroup>
+      <Folder Include="Exports\BaseExports\Input\Triggers" />
+      <Folder Include="Object\Input\Triggers" />
+    </ItemGroup>
+
+    <Import Project="..\..\BuildIntegration\DecayEngine.proj" />
+</Project>

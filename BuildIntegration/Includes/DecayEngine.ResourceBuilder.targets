@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <ProjectReference Include="$(DecayRootDirectory)Tools\ResourceBuilder\DecayEngine.ResourceBuilder\*.csproj"
+                          Condition="'$(MSBuildProjectName)' != 'DecayEngine.ResourceBuilder'" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <_DecayIncluded>$(_DecayIncluded)ResourceBuilder;</_DecayIncluded>
+    </PropertyGroup>
+
+    <Import Project="$(DecayIncludesDirectory)DecayEngine.ResourceBuilderLib.targets" Condition="!$(_DecayIncluded.Contains(';ResourceBuilderLib;'))" />
+</Project>

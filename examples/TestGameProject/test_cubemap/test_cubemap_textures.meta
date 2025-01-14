@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <texture3d id="test_cubemap_texture">
+        <properties>
+            <back>./textures/stormydays_bk.dds</back>
+            <down>./textures/stormydays_dn.dds</down>
+            <front>./textures/stormydays_ft.dds</front>
+            <left>./textures/stormydays_lf.dds</left>
+            <right>./textures/stormydays_rt.dds</right>
+            <up>./textures/stormydays_up.dds</up>
+        </properties>
+    </texture3d>
+</resources>

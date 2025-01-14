@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <prefab id="test_light_gizmo">
+        <children>
+            <component type="animatedMaterial" name="material_test_light_gizmo" active="true">
+                <template>
+                    <resource id="test_light_gizmo" />
+                </template>
+            </component>
+
+            <component type="shaderProgram" name="shader_program_test_light_gizmo" active="true">
+                <template>
+                    <resource id="default_geometry_shader_program" />
+                </template>
+            </component>
+
+            <component type="animatedSprite" name="sprite_test_light_gizmo" active="true">
+                <properties>
+                    <transform>
+                        <position x="0" y="0" z="0" />
+                        <rotation x="0" y="0" z="0" />
+                        <scale x="1" y="1" z="1" />
+                    </transform>
+                    <material>
+                        <this>
+                            <components>
+                                <ofType type="animatedMaterial">
+                                    <withName name="material_test_light_gizmo">
+                                        <first />
+                                    </withName>
+                                </ofType>
+                            </components>
+                        </this>
+                    </material>
+                    <shaderProgram>
+                        <this>
+                            <components>
+                                <ofType type="shaderProgram">
+                                    <withName name="shader_program_test_light_gizmo">
+                                        <first />
+                                    </withName>
+                                </ofType>
+                            </components>
+                        </this>
+                    </shaderProgram>
+                    <camera>
+                        <activeScene>
+                            <components>
+                                <ofType type="cameraPersp">
+                                    <withName name="scene_camera_persp">
+                                        <first />
+                                    </withName>
+                                </ofType>
+                            </components>
+                        </activeScene>
+                    </camera>
+                </properties>
+            </component>
+        </children>
+    </prefab>
+</resources>

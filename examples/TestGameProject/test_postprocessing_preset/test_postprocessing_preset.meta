@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <postProcessingPreset id="test_postprocessing_preset">
+        <properties>
+            <stages>
+                <postProcessingStage name="sharpen">
+                    <shaderProgram>
+                        <resource id="test_postprocessing_shader_program" />
+                    </shaderProgram>
+                    <kernel>
+                        -1,-1,-1,
+                        -1,9,-1,
+                        -1,-1,-1
+                    </kernel>
+                    <propertySheet>
+                        <number name="radius">0.001111</number>
+                    </propertySheet>
+                </postProcessingStage>
+                <postProcessingStage name="tint">
+                    <shaderProgram>
+                        <resource id="test_postprocessing_tint_shader_program" />
+                    </shaderProgram>
+                </postProcessingStage>
+                <postProcessingStage name="blur">
+                    <shaderProgram>
+                        <resource id="test_postprocessing_shader_program" />
+                    </shaderProgram>
+                    <kernel>
+                        0.0625,0.125,0.0625,
+                        0.125,0.25,0.125,
+                        0.0625,0.125,0.0625
+                    </kernel>
+                    <propertySheet>
+                        <number name="radius">0.003333</number>
+                    </propertySheet>
+                </postProcessingStage>
+            </stages>
+        </properties>
+    </postProcessingPreset>
+</resources>

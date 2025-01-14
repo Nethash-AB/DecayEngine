@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Decay Engine resource metadata file.
+
+This file was created by a tool.
+ResourceCompiler Version: 0.0.0.0-->
+<resources>
+    <texture2d id="chassis_diffuse">
+        <properties>
+            <source>./textures/chassis_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="lazy_ass_normal">
+        <properties>
+            <source>./textures/lazy_ass_normal.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="exhaust_right_diffuse">
+        <properties>
+            <source>./textures/exhaust_right_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="exhaust_left_diffuse">
+        <properties>
+            <source>./textures/exhaust_left_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="protector_right_diffuse">
+        <properties>
+            <source>./textures/protector_right_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="protector_left_diffuse">
+        <properties>
+            <source>./textures/protector_left_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="bumper_front_diffuse">
+        <properties>
+            <source>./textures/bumper_front_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="axle_rear_diffuse">
+        <properties>
+            <source>./textures/axle_rear_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="axle_front_diffuse">
+        <properties>
+            <source>./textures/axle_front_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="barrel_diffuse">
+        <properties>
+            <source>./textures/barrel_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="plank2_diffuse">
+        <properties>
+            <source>./textures/plank2_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="plank1_diffuse">
+        <properties>
+            <source>./textures/plank1_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="wheel_diffuse">
+        <properties>
+            <source>./textures/wheel_diffuse.dds</source>
+        </properties>
+    </texture2d>
+    <texture2d id="bumper_front_detail_diffuse">
+        <properties>
+            <source>./textures/bumper_front_detail_diffuse.dds</source>
+        </properties>
+    </texture2d>
+</resources>
